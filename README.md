@@ -6,12 +6,19 @@ This project is an HTML page with CSS styling and dynamic JavaScript content tha
 
 ## Table of Contents
 * [Design](#design)
+    * [User Stories] (#user-stories)
 * [Features] (#features)
 * [Testing] (#testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
 # Design
+## User Stories
+- __As a user of the site, I want to:__
+    - Easily see how to play the game.
+    - Be able to navigate the site intuitively.
+    - See my score.
+    - Have the game difficulty increase as I win more games.
 
 # Features
 
