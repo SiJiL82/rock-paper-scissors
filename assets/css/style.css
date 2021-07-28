@@ -4,8 +4,11 @@
     --content-background-colour: 192, 160, 26;
     --header-text-colour: 255, 235, 198;
     --content-text-colour: 255, 255, 255;
+    --gamebutton-background-colour: 255, 255, 255;
+    --gamebutton-colour: 96, 108, 47;
     --player-highlight-colour: 126, 242, 230;
     --computer-highlight-colour: 166, 61, 158;
+    --transparent: 0, 0, 0, 0;
 
 }
 
@@ -35,4 +38,20 @@ header {
     color: rgb(var(--header-text-colour), 1);
     font-size: 5rem;
     float: left;
+}
+
+.game-button-container {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    background-color: rgb(var(--gamebutton-background-colour), 1);
+    text-align: center;
+}
+
+.game-button  {
+    font-size: 8rem;
+    color: rgb(var(--gamebutton-colour), 1);
+    background-color: rgb(var(--transparent));
+    padding-top: 1rem;
+    margin: auto;
 }

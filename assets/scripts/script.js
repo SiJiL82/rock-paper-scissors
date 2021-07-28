@@ -14,8 +14,8 @@ function addElementButtons() {
     let html = "";
     for(let gameElement of gameElements) {
         html += `
-            <div class="game-button">
-                <button id="${gameElement}" type="button"><i class="fas fa-hand-${gameElement}"></i></button> 
+            <div class="game-button-container">
+                <button class="game-button" id="${gameElement}" type="button"><i class="fas fa-hand-${gameElement}"></i></button> 
             </div>
         `
     }
