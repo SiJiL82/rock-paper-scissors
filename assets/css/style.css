@@ -1,3 +1,14 @@
+/* Variables */
+:root {
+    --background-colour: 0, 56, 68;
+    --content-background-colour: 192, 160, 26;
+    --header-text-colour: 255, 235, 198;
+    --content-text-colour: 255, 255, 255;
+    --player-highlight-colour: 126, 242, 230;
+    --computer-highlight-colour: 166, 61, 158;
+
+}
+
 /* Clear spacing and border values for all objects */
 * {
     margin: 0;
