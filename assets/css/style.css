@@ -56,6 +56,12 @@ header {
     margin: auto;
 }
 
+.player-picked {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(var(--player-highlight-colour), 1);
+}
+
 .score-area {
     width: 750px;
     height: 100px;
