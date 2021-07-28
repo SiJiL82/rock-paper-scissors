@@ -1,6 +1,7 @@
 let gameElements = ['rock','paper','scissors'];
 
 addElementButtons();
+addElementButtonListeners();
 /*
 Icons:
 <i class="fas fa-hand-rock"></i>
@@ -22,10 +23,20 @@ function addElementButtons() {
     buttonArea.innerHTML = html;
 }
 
+function addElementButtonListeners() {
+    //Loop through all game buttons and set a listener on their click to call pickElement
+    let gameButtons = document.getElementsByClassName("game-button");
+
+    for(let gameButton of gameButtons) {
+        gameButton.addEventListener("click", pickElement)
+    }
+}
+
 function pickElement() {
     //Set myPick to the id of the button we've clicked on
     myPick = this.id;
 }
+
 
 let myPick;
 let computerPick;
