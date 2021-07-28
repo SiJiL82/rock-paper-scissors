@@ -31,7 +31,7 @@ body {
 
     border-radius: 2em;
 
-    margin: 80px auto;
+    margin: 80px auto 0 auto;
 }
 
 header {
@@ -54,4 +54,13 @@ header {
     background-color: rgb(var(--transparent));
     padding-top: 1rem;
     margin: auto;
+}
+
+.score-area {
+    width: 750px;
+    height: 100px;
+    background-color: rgb(var(--content-background-colour), 1);
+
+    border-radius: 2em;
+    margin: 10px auto;
 }
