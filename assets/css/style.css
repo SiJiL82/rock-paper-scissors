@@ -76,3 +76,26 @@ header {
     margin: 10px auto;
 }
 
+.score-bar {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#player-score-bar {
+    float: left;
+    width: 50%;    
+    border-style: solid;
+    border-width: 0.8rem;
+    border-color: rgb(var(--player-highlight-colour), 1);
+    border-radius: 2em 0 0 2em;
+    text-align: right;
+}
+
+#computer-score-bar {
+    float: left;
+    width: 50%;    
+    border-style: solid;
+    border-width: 0.8rem;
+    border-color: rgb(var(--computer-highlight-colour), 1);
+    border-radius: 0 2em 2em 0;
+}
