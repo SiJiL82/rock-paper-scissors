@@ -45,6 +45,8 @@ function pickElement(event) {
     //Let computer pick element
     computerPickElement();
     highlightComputerPickedElement();
+
+    getRoundWinner();
 }
 
 function highlightPickedElement(target) {
@@ -68,31 +70,34 @@ function getRoundWinner() {
     let playerPickIndex = gameElements.indexOf(playerPick);
     let computerPickIndex = gameElements.indexOf(computerPick);
 
-    if(playerPickIndex == computerPickIndex) {
-        //Draw, no score added
-        resultDisplay.innerText = "Draw!";
-    }
     //Player picked element at end of array, which beats element at start of array
-    else if((playerPickIndex == gameElements.length - 1) && (computerPickIndex == 0)) {
-        //Player wins
-        resultDisplay.innerText = "You win!";
+    let playerWin = false;
+    let computerWin = false;
+    playerWin = ((computerPickIndex == gameElements.length - 1) && (playerPickIndex == 0))
+        || playerWin;
+    // console.log(playerWin);
+    playerWin = (playerPickIndex > computerPickIndex)
+        && !((playerPickIndex == gameElements.length - 1) && (computerPickIndex == 0))
+        || playerWin;
+    // console.log(playerWin);
+    computerWin = ((playerPickIndex == gameElements.length - 1) && (computerPickIndex == 0))
+        || computerWin;
+    // console.log(computerWin);
+    computerWin = (computerPickIndex > playerPickIndex ) 
+        && !((computerPickIndex == gameElements.length - 1) && (playerPickIndex == 0))
+        || computerWin;
+    // console.log(computerWin);
+
+    if(playerWin){
+        resultDisplay.innerText = "You Win!";
         playerScore++;
     }
-    //Computer picked element at end of array, player picked start of array
-    else if((computerPickIndex == gameElements.length - 1) && (playerPickIndex == 0)) {
-        //Computer wins
+    else if(computerWin) {
         resultDisplay.innerText = "I win!"
         computerScore++;
-    }
-    else if(playerPick > computerPick) {
-        //Player wins
-        resultDisplay.innerText = "You win!";
-        playerScore++;
     }
     else {
-        //Computer wins
-        resultDisplay.innerText = "I win!"
-        computerScore++;
+        resultDisplay.innerText = "Draw!"
     }
 
 }
