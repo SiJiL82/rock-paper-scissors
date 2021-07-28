@@ -20,3 +20,13 @@ body {
     background-color: rgb(var(--background-colour), 1);
 }
 
+.game-area {
+    width: 750px;
+    height: 750px;
+
+    background-color: rgb(var(--content-background-colour), 1);
+
+    border-radius: 2em;
+
+    margin: 60px auto;
+}
