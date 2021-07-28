@@ -18,6 +18,14 @@ let fights = [
 let playerScore = 0;
 let computerScore = 0;
 
+//Max score for the game
+let maxScore = 10;
+
+//Score Bar Initial Widths
+let playerScoreBarWidth = 50;
+let computerScoreBarWidth = 50;
+let scoreMoveAmount = 50 / maxScore;
+
 //Chosen elements for the player and computer
 let playerPick;
 let computerPick;
@@ -124,6 +132,7 @@ function getRoundWinner() {
                 break;
             }
         }
+        // updateScoreBarDisplay();
     }
 }
 
@@ -131,11 +140,22 @@ function getRoundWinner() {
 function updatePlayerScoreDisplay() {
     let playerScoreText = document.getElementById("player-score");
     playerScoreText.innerText = playerScore;
+
+    playerScoreBarWidth += scoreMoveAmount;
+    computerScoreBarWidth -= scoreMoveAmount;
+
+    document.getElementById("player-score-bar").style.width = playerScoreBarWidth + "%";
+    document.getElementById("computer-score-bar").style.width = computerScoreBarWidth + "%";    
 }
 
 //Set the computer's score in the HTML
 function updateComputerScoreDisplay() {
     let computerScoreText = document.getElementById("computer-score");
     computerScoreText.innerText = computerScore;
-}
 
+    playerScoreBarWidth -= scoreMoveAmount;
+    computerScoreBarWidth += scoreMoveAmount;
+
+    document.getElementById("player-score-bar").style.width = playerScoreBarWidth + "%";
+    document.getElementById("computer-score-bar").style.width = computerScoreBarWidth + "%";  
+}
