@@ -1,0 +1,6 @@
+/* Clear spacing and border values for all objects */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
