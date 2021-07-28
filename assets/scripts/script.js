@@ -36,12 +36,19 @@ function pickElement(event) {
     console.log(`Picked element: ${myPick}`);
     //Add styling to the picked button to show we've chosen it
     highlightPickedElement(event.currentTarget);
+    //Let computer pick element
+    computerPickElement();
 }
 
 function highlightPickedElement(target) {
     //this.classList.add("player-picked");
-    console.log(target);
     target.classList.add("player-picked");
+}
+
+function computerPickElement() {
+    //Set computerPick to a random element
+    computerPick = gameElements[Math.floor(Math.random() * gameElements.length)];
+    console.log(`Computer picked element: ${computerPick}`);
 }
 
 
