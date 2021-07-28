@@ -1,4 +1,6 @@
 let gameElements = ['rock','paper','scissors'];
+let playerScore = 0;
+let computerScore = 0;
 
 addElementButtons();
 addElementButtonListeners();
