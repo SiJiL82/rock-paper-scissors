@@ -62,4 +62,37 @@ function highlightComputerPickedElement() {
     target.classList.add("computer-picked");
 }
 
+function getRoundWinner() {
+    let resultDisplay = document.getElementById("result-text");
 
+    let playerPickIndex = gameElements.indexOf(playerPick);
+    let computerPickIndex = gameElements.indexOf(computerPick);
+
+    if(playerPickIndex == computerPickIndex) {
+        //Draw, no score added
+        resultDisplay.innerText = "Draw!";
+    }
+    //Player picked element at end of array, which beats element at start of array
+    else if((playerPickIndex == gameElements.length - 1) && (computerPickIndex == 0)) {
+        //Player wins
+        resultDisplay.innerText = "You win!";
+        playerScore++;
+    }
+    //Computer picked element at end of array, player picked start of array
+    else if((computerPickIndex == gameElements.length - 1) && (playerPickIndex == 0)) {
+        //Computer wins
+        resultDisplay.innerText = "I win!"
+        computerScore++;
+    }
+    else if(playerPick > computerPick) {
+        //Player wins
+        resultDisplay.innerText = "You win!";
+        playerScore++;
+    }
+    else {
+        //Computer wins
+        resultDisplay.innerText = "I win!"
+        computerScore++;
+    }
+
+}
