@@ -1,6 +1,10 @@
 let gameElements = ['rock','paper','scissors'];
+
 let playerScore = 0;
 let computerScore = 0;
+
+let playerPick;
+let computerPick;
 
 addElementButtons();
 addElementButtonListeners();
@@ -33,9 +37,9 @@ function addElementButtonListeners() {
 }
 
 function pickElement(event) {
-    //Set myPick to the id of the button we've clicked on
-    myPick = event.currentTarget.id;
-    console.log(`Picked element: ${myPick}`);
+    //Set playerPick to the id of the button we've clicked on
+    playerPick = event.currentTarget.id;
+    console.log(`Picked element: ${playerPick}`);
     //Add styling to the picked button to show we've chosen it
     highlightPickedElement(event.currentTarget);
     //Let computer pick element
@@ -59,5 +63,3 @@ function highlightComputerPickedElement() {
 }
 
 
-let myPick;
-let computerPick;
