@@ -15,9 +15,7 @@ function addElementButtons() {
     let html = "";
     for(let gameElement of gameElements) {
         html += `
-            <div class="game-button-container">
                 <button class="game-button" id="${gameElement}" type="button"><i class="fas fa-hand-${gameElement}"></i></button> 
-            </div>
         `
     }
     buttonArea.innerHTML = html;
@@ -32,9 +30,18 @@ function addElementButtonListeners() {
     }
 }
 
-function pickElement() {
+function pickElement(event) {
     //Set myPick to the id of the button we've clicked on
-    myPick = this.id;
+    myPick = event.currentTarget.id;
+    console.log(`Picked element: ${myPick}`);
+    //Add styling to the picked button to show we've chosen it
+    highlightPickedElement(event.currentTarget);
+}
+
+function highlightPickedElement(target) {
+    //this.classList.add("player-picked");
+    console.log(target);
+    target.classList.add("player-picked");
 }
 
 

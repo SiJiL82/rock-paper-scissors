@@ -41,24 +41,28 @@ header {
 }
 
 .game-button-container {
-    width: 12rem;
-    height: 12rem;
-    border-radius: 50%;
-    background-color: rgb(var(--gamebutton-background-colour), 1);
-    text-align: center;
+    
 }
 
 .game-button  {
     font-size: 8rem;
     color: rgb(var(--gamebutton-colour), 1);
-    background-color: rgb(var(--transparent));
-    padding-top: 1rem;
+    background-color: rgb(var(--gamebutton-background-colour), 1);
+    
     margin: auto;
+    
+    width: 12rem;
+    height: 12rem;
+    
+    border-radius: 50%;
+    text-align: center;
+
+    border: 1px solid red;
 }
 
 .player-picked {
     border-style: solid;
-    border-width: 2px;
+    border-width: 0.8rem;
     border-color: rgb(var(--player-highlight-colour), 1);
 }
 
@@ -70,3 +74,4 @@ header {
     border-radius: 2em;
     margin: 10px auto;
 }
+
