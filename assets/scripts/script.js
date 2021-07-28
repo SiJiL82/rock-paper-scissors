@@ -21,3 +21,11 @@ function addElementButtons() {
     }
     buttonArea.innerHTML = html;
 }
+
+function pickElement() {
+    //Set myPick to the id of the button we've clicked on
+    myPick = this.id;
+}
+
+let myPick;
+let computerPick;
