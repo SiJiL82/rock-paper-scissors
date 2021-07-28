@@ -112,11 +112,13 @@ function getRoundWinner() {
                 if(playerPickIndex == fight[0]) {
                     resultDisplay.innerHTML += "<br>You win!";
                     playerScore++;
+                    updatePlayerScoreDisplay();
                 }
                 else {
                     //Computer index matches the first item in the array, so computer won
                     resultDisplay.innerHTML += "<br>I win!";
                     computerScore++;
+                    updateComputerScoreDisplay();
                 }
                 //If we've matched a fight, no point checking the rest
                 break;
@@ -124,3 +126,16 @@ function getRoundWinner() {
         }
     }
 }
+
+//Set the player's score in the HTML
+function updatePlayerScoreDisplay() {
+    let playerScoreText = document.getElementById("player-score");
+    playerScoreText.innerText = playerScore;
+}
+
+//Set the computer's score in the HTML
+function updateComputerScoreDisplay() {
+    let computerScoreText = document.getElementById("computer-score");
+    computerScoreText.innerText = computerScore;
+}
+
