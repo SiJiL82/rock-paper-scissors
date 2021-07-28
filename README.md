@@ -6,7 +6,8 @@ This project is an HTML page with CSS styling and dynamic JavaScript content tha
 
 ## Table of Contents
 * [Design](#design)
-    * [User Stories] (#user-stories)
+    * [User Stories](#user-stories)
+    * [Site Mockups](#site-mockups)
 * [Features] (#features)
 * [Testing] (#testing)
 * [Deployment] (#deployment)
@@ -19,6 +20,11 @@ This project is an HTML page with CSS styling and dynamic JavaScript content tha
     - Be able to navigate the site intuitively.
     - See my score.
     - Have the game difficulty increase as I win more games.
+
+## Site Mockups
+### Index Page
+    ![Index Page Mockup](readme-assets/images/index-layout.png)
+
 
 # Features
 
