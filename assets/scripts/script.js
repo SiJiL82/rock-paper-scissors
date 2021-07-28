@@ -38,10 +38,10 @@ function pickElement(event) {
     highlightPickedElement(event.currentTarget);
     //Let computer pick element
     computerPickElement();
+    highlightComputerPickedElement();
 }
 
 function highlightPickedElement(target) {
-    //this.classList.add("player-picked");
     target.classList.add("player-picked");
 }
 
@@ -49,6 +49,11 @@ function computerPickElement() {
     //Set computerPick to a random element
     computerPick = gameElements[Math.floor(Math.random() * gameElements.length)];
     console.log(`Computer picked element: ${computerPick}`);
+}
+
+function highlightComputerPickedElement() {
+    target = document.getElementById(computerPick);
+    target.classList.add("computer-picked");
 }
 
 

@@ -56,14 +56,18 @@ header {
     
     border-radius: 50%;
     text-align: center;
-
-    border: 1px solid red;
 }
 
 .player-picked {
     border-style: solid;
     border-width: 0.8rem;
     border-color: rgb(var(--player-highlight-colour), 1);
+}
+
+.computer-picked {
+    outline-style: solid;
+    outline-width: 0.8rem;
+    outline-color: rgb(var(--computer-highlight-colour), 1);
 }
 
 .score-area {
