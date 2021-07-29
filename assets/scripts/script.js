@@ -31,6 +31,10 @@ let playerScoreBar = document.getElementById("player-score-bar");
 //This needs to be one of the border edges rather than the "border" pseudo-property
 let scoreBorderWidth = window.getComputedStyle(playerScoreBar).borderTopWidth;
 
+//Get fadeout time CSS variable to use when resetting picked elements
+let pickedFadeoutTime = getComputedStyle(document.documentElement).getPropertyValue("--picked-fadeout-time");
+pickedFadeoutTime = pickedFadeoutTime.substring(0, pickedFadeoutTime.length - 2);
+
 //Chosen elements for the player and computer
 let playerPick;
 let computerPick;
