@@ -9,7 +9,7 @@
     --player-highlight-colour: 126, 242, 230;
     --computer-highlight-colour: 166, 61, 158;
     --transparent: 0, 0, 0, 0;
-
+    --picked-fadeout-time: 400ms;
 }
 
 /* Clear spacing and border values for all objects */
@@ -74,7 +74,7 @@ header {
 
 .player-picked-fadeout {
     border-color: rgb(var(--player-highlight-colour), 0);
-    transition: 800ms linear;
+    transition: var(--picked-fadeout-time) linear;
 }
 
 .computer-picked {
@@ -85,7 +85,7 @@ header {
 
 .computer-picked-fadeout {
     outline-color: rgb(var(--computer-highlight-colour), 0);
-    transition: 800ms linear;
+    transition: var(--picked-fadeout-time) linear;
 }
 
 .score-area {
@@ -108,6 +108,7 @@ header {
     border-style: solid;
     border-width: 0.8rem;
     border-color: rgb(var(--player-highlight-colour), 1);
+    background-color: rgb(var(--player-highlight-colour), 1);
     border-radius: 2em 0 0 2em;
     text-align: right;
 }
@@ -118,6 +119,7 @@ header {
     border-style: solid;
     border-width: 0.8rem;
     border-color: rgb(var(--computer-highlight-colour), 1);
+    background-color: rgb(var(--computer-highlight-colour), 1);
     border-radius: 0 2em 2em 0;
 }
 
