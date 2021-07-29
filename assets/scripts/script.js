@@ -99,8 +99,7 @@ function computerPickElement() {
 
 //Add styling to the element the computer picked.
 function highlightComputerPickedElement() {
-    target = document.getElementById(computerPick);
-    target.classList.add("computer-picked");
+    document.getElementById(computerPick).classList.add("computer-picked");
 }
 
 //After both player and computer have picked an element, compare them against the fights array to see who wins.
@@ -200,3 +199,4 @@ function updateComputerScoreDisplay() {
     let computerScoreText = document.getElementById("computer-score");
     computerScoreText.innerText = computerScore;
 }
+
