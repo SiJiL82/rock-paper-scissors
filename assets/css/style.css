@@ -40,6 +40,13 @@ header {
     float: left;
 }
 
+#game-buttons {
+    width: 600px;
+    height: 600px;
+    border: 1px solid red;
+    border-radius: 50%;
+    margin: auto;
+}
 
 .game-button  {
     font-size: 8rem;
@@ -53,6 +60,10 @@ header {
     
     border-radius: 50%;
     text-align: center;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
 }
 
 .player-picked {

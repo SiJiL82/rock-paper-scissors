@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 3;
+let numActiveElements = 5;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -46,10 +46,13 @@ function addElementButtons() {
 
     //Append to html string a button for each element
     let html = "";
+
+    let rotationStep = 360 / numActiveElements;
     
     for(let i = 0; i < numActiveElements; i++) {
+        let rotation = rotationStep * i;
         html += `
-            <button class="game-button" id="${gameElements[i]}" type="button"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(200px) rotate(-${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `
     }
 
@@ -64,6 +67,16 @@ function addElementButtonListeners() {
 
     for(let gameButton of gameButtons) {
         gameButton.addEventListener("click", pickElement)
+    }
+}
+
+//Remove button listeners
+function removeElementButtonListeners() {
+    //Loop through all game buttons and set a listener on their click to call pickElement
+    let gameButtons = document.getElementsByClassName("game-button");
+
+    for(let gameButton of gameButtons) {
+        gameButton.removeEventListener("click", pickElement)
     }
 }
 
@@ -140,8 +153,14 @@ function getRoundWinner() {
         }
         updateScoreBarDisplay();
     }
+    //Stop letting the player click buttons until we've reset them
+    removeElementButtonListeners();
     //Clear the pick highlighting after 1s
     setTimeout(function(){clearPickedElements()}, 1000);
+    //Re-enable buttons
+    setTimeout(function(){addElementButtonListeners()}, 1810);
+    //Change center display text to let user know the next round can start
+    setTimeout(function(){document.getElementById("result-text").innerText = "Go!";}, 1810);
 }
 
 //Set the score bar so each player's score is a percentage of the total cumulated score
