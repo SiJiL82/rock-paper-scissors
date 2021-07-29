@@ -179,10 +179,11 @@ function updateScoreBarDisplay() {
 
     //If the computer has won 100% of the rounds so far, hide the player score bar
     //TODO: Get the elements once into variables and use those instead of finding them every time
+    let playerScoreBarElement = document.getElementById("player-score-bar");
     //TODO: Create functions to replace the repeated code here.
     if(playerScoreBarWidth === 0) {
         //Set border width on player score to 0 to stop it contributing to the size of the element.
-        document.getElementById("player-score-bar").style.borderWidth = "0px";
+        playerScoreBarElement.style.borderWidth = "0px";
         //Set the computer score bar corners to rounded to match the CSS styling
         //TODO: Get this value from the stylesheet and apply it dynamically so we can change the styling and not have to change this code too
         document.getElementById("computer-score-bar").style.borderTopLeftRadius = "2em";
@@ -190,7 +191,7 @@ function updateScoreBarDisplay() {
     }
     else {
         //Set both score bars back to their default styling when the computer hasn't won 100% of the rounds
-        document.getElementById("player-score-bar").style.borderWidth = scoreBorderWidth;
+        playerScoreBarElement.style.borderWidth = scoreBorderWidth;
         document.getElementById("computer-score-bar").style.borderTopLeftRadius = "unset";
         document.getElementById("computer-score-bar").style.borderBottomLeftRadius = "unset";
     }
@@ -199,18 +200,18 @@ function updateScoreBarDisplay() {
         //Set border width on computer score to 0 to stop it contributing to the size of the element.
         document.getElementById("computer-score-bar").style.borderWidth = "0px";
         //Set the player score bar corners to rounded to match the CSS styling
-        document.getElementById("player-score-bar").style.borderTopRightRadius = "2em";
-        document.getElementById("player-score-bar").style.borderBottomRightRadius = "2em";
+        playerScoreBarElement.style.borderTopRightRadius = "2em";
+        playerScoreBarElement.style.borderBottomRightRadius = "2em";
     }
     else {
         //Set both score bars back to their default styling when the computer hasn't won 100% of the rounds
         document.getElementById("computer-score-bar").style.borderWidth = scoreBorderWidth;
-        document.getElementById("player-score-bar").style.borderTopRightRadius = "unset";
-        document.getElementById("player-score-bar").style.borderBottomRightRadius = "unset";
+        playerScoreBarElement.style.borderTopRightRadius = "unset";
+        playerScoreBarElement.style.borderBottomRightRadius = "unset";
     }
 
     //Set each score bar to its calculated width
-    document.getElementById("player-score-bar").style.width = playerScoreBarWidth + "%";
+    playerScoreBarElement.style.width = playerScoreBarWidth + "%";
     document.getElementById("computer-score-bar").style.width = computerScoreBarWidth + "%";
 }
 
