@@ -159,12 +159,13 @@ function getRoundWinner() {
     }
     //Stop letting the player click buttons until we've reset them
     removeElementButtonListeners();
-    //Clear the pick highlighting after 1s
-    setTimeout(function(){clearPickedElements()}, 1000);
+    //Clear the pick highlighting
+    let clearHighlightingTime = 900;
+    setTimeout(function(){clearPickedElements()}, clearHighlightingTime);
     //Re-enable buttons
-    setTimeout(function(){addElementButtonListeners()}, 1810);
+    setTimeout(function(){addElementButtonListeners()}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
     //Change center display text to let user know the next round can start
-    setTimeout(function(){document.getElementById("result-text").innerText = "Go!";}, 1810);
+    setTimeout(function(){document.getElementById("result-text").innerText = "Go!";}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
 }
 
 //Set the score bar so each player's score is a percentage of the total cumulated score
@@ -236,7 +237,7 @@ function clearPickedElements() {
     setTimeout(function(){
         playerPickedElement.classList.remove("player-picked-fadeout");
         playerPickedElement.classList.remove("player-picked");
-    }, 810);
+    }, parseInt(pickedFadeoutTime) + 10);
 
     //Get the element that the computer has picked
     let computerPickedElement = document.getElementById(computerPick);
@@ -246,5 +247,5 @@ function clearPickedElements() {
     setTimeout(function(){
         computerPickedElement.classList.remove("computer-picked-fadeout");
         computerPickedElement.classList.remove("computer-picked");
-    }, 810);
+    }, parseInt(pickedFadeoutTime) + 10);
 }
