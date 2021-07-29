@@ -41,7 +41,8 @@ body {
 
 header {
     color: rgb(var(--header-text-colour), 1);
-    font-size: 5rem;
+    font-size: 4rem;
+    font-family: var(--heading-font);
     float: left;
 }
 
@@ -97,6 +98,7 @@ header {
 .score-bar {
     height: 100%;
     box-sizing: border-box;
+    font-family: var(--heading-font);
 }
 
 #player-score-bar {
@@ -109,6 +111,11 @@ header {
     border-radius: 2em 0 0 2em;
     text-align: right;
     color: rgb(var(--player-score-text-colour), 1);
+    
+}
+
+.score-text {
+    font-size: 3rem;
 }
 
 #computer-score-bar {
