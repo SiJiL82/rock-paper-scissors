@@ -91,15 +91,19 @@ function removeElementButtonListeners() {
     }
 }
 
+//Set the page header and window title to the elements we're currently using.
 function setHeaderTitleText() {
+    //Get the header element
     let headerElement = document.getElementsByTagName("header");
-    console.log(headerElement);
+
     let html = "";
+    //Loop through the current game elements and add them to the HTML string
     for(let i =  0; i < numActiveElements; i++) {
         html += `
             ${gameElements[i]} <br>
         `;
     }
+    //Set header text to built string
     headerElement[0].innerHTML = html;
 }
 
