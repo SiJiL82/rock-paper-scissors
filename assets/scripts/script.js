@@ -31,6 +31,12 @@ let playerScoreBar = document.getElementById("player-score-bar");
 //This needs to be one of the border edges rather than the "border" pseudo-property
 let scoreBorderWidth = window.getComputedStyle(playerScoreBar).borderTopWidth;
 
+//Get score bar text colours from CSS
+let playerScoreTextColour = window.getComputedStyle(playerScoreBar).color;
+let computerScoreTextColour = window.getComputedStyle(document.getElementById("computer-score-bar")).color;
+console.log(playerScoreTextColour);
+console.log(computerScoreTextColour);
+
 //Get fadeout time CSS variable to use when resetting picked elements
 let pickedFadeoutTime = getComputedStyle(document.documentElement).getPropertyValue("--picked-fadeout-time");
 pickedFadeoutTime = pickedFadeoutTime.substring(0, pickedFadeoutTime.length - 2);
@@ -185,6 +191,8 @@ function updateScoreBarDisplay() {
     if(playerScoreBarWidth === 0) {
         //Set border width on player score to 0 to stop it contributing to the size of the element.
         playerScoreBarElement.style.borderWidth = "0px";
+        //Hide the score text too
+        playerScoreBarElement.style.color = (playerScoreTextColour.replace("rgb", "rgba")).replace(")", ", 0)");
         //Set the computer score bar corners to rounded to match the CSS styling
         //TODO: Get this value from the stylesheet and apply it dynamically so we can change the styling and not have to change this code too
         computerScoreBarElement.style.borderTopLeftRadius = "2em";
@@ -195,6 +203,7 @@ function updateScoreBarDisplay() {
         playerScoreBarElement.style.borderWidth = scoreBorderWidth;
         computerScoreBarElement.style.borderTopLeftRadius = "unset";
         computerScoreBarElement.style.borderBottomLeftRadius = "unset";
+        playerScoreBarElement.style.color = playerScoreTextColour;
     }
     //If the player has won 100% of the rounds so far, hide the computer score bar
     if(computerScoreBarWidth === 0) {
