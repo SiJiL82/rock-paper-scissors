@@ -1,5 +1,6 @@
 //All potential elements for the game
-let gameElements = ["rock","paper","scissors","lizard","spock"];
+let gameElements = ["rock","paper","scissors"];
+//,"lizard","spock"
 //Fight data - first item is the winner, 2nd the element it beats. 3rd item is the action for the fight.
 let fights = [
     [0, 2, "blunts"],
@@ -18,13 +19,14 @@ let fights = [
 let playerScore = 0;
 let computerScore = 0;
 
-//Max score for the game
-let maxScore = 10;
-
 //Score Bar Initial Widths
 let playerScoreBarWidth = 50;
 let computerScoreBarWidth = 50;
-let scoreMoveAmount = 50 / maxScore;
+
+//Get border width from stylesheet for the score bars, so we can set it back to this value after clearing it
+let playerScoreBar = document.getElementById("player-score-bar");
+//This needs to be one of the border edges rather than the "border" pseudo-property
+let scoreBorderWidth = window.getComputedStyle(playerScoreBar).borderTopWidth;
 
 //Chosen elements for the player and computer
 let playerPick;
@@ -33,6 +35,8 @@ let computerPick;
 //Initialise the game
 addElementButtons();
 addElementButtonListeners();
+
+
 
 //Add a button for each element in the elements array
 function addElementButtons() {
@@ -132,30 +136,64 @@ function getRoundWinner() {
                 break;
             }
         }
-        // updateScoreBarDisplay();
+        updateScoreBarDisplay();
     }
+}
+
+//Set the score bar so each player's score is a percentage of the total cumulated score
+function updateScoreBarDisplay() {
+    //Get the cumulated score for both players
+    let totalScore = playerScore + computerScore;
+    //Set player score bar width to their score as a percentage of the total
+    let playerScoreBarWidth = (playerScore / totalScore) * 100;
+    //Set computer score bar width to 100% - player score percentage to avoid any floating point issues.
+    let computerScoreBarWidth = 100 - playerScoreBarWidth;
+
+    //If the computer has won 100% of the rounds so far, hide the player score bar
+    //TODO: Get the elements once into variables and use those instead of finding them every time
+    //TODO: Create functions to replace the repeated code here.
+    if(playerScoreBarWidth === 0) {
+        //Set border width on player score to 0 to stop it contributing to the size of the element.
+        document.getElementById("player-score-bar").style.borderWidth = "0px";
+        //Set the computer score bar corners to rounded to match the CSS styling
+        //TODO: Get this value from the stylesheet and apply it dynamically so we can change the styling and not have to change this code too
+        document.getElementById("computer-score-bar").style.borderTopLeftRadius = "2em";
+        document.getElementById("computer-score-bar").style.borderBottomLeftRadius = "2em";
+    }
+    else {
+        //Set both score bars back to their default styling when the computer hasn't won 100% of the rounds
+        document.getElementById("player-score-bar").style.borderWidth = scoreBorderWidth;
+        document.getElementById("computer-score-bar").style.borderTopLeftRadius = "unset";
+        document.getElementById("computer-score-bar").style.borderBottomLeftRadius = "unset";
+    }
+    //If the player has won 100% of the rounds so far, hide the computer score bar
+    if(computerScoreBarWidth === 0) {
+        //Set border width on computer score to 0 to stop it contributing to the size of the element.
+        document.getElementById("computer-score-bar").style.borderWidth = "0px";
+        //Set the player score bar corners to rounded to match the CSS styling
+        document.getElementById("player-score-bar").style.borderTopRightRadius = "2em";
+        document.getElementById("player-score-bar").style.borderBottomRightRadius = "2em";
+    }
+    else {
+        //Set both score bars back to their default styling when the computer hasn't won 100% of the rounds
+        document.getElementById("computer-score-bar").style.borderWidth = scoreBorderWidth;
+        document.getElementById("player-score-bar").style.borderTopRightRadius = "unset";
+        document.getElementById("player-score-bar").style.borderBottomRightRadius = "unset";
+    }
+
+    //Set each score bar to its calculated width
+    document.getElementById("player-score-bar").style.width = playerScoreBarWidth + "%";
+    document.getElementById("computer-score-bar").style.width = computerScoreBarWidth + "%";
 }
 
 //Set the player's score in the HTML
 function updatePlayerScoreDisplay() {
     let playerScoreText = document.getElementById("player-score");
     playerScoreText.innerText = playerScore;
-
-    playerScoreBarWidth += scoreMoveAmount;
-    computerScoreBarWidth -= scoreMoveAmount;
-
-    document.getElementById("player-score-bar").style.width = playerScoreBarWidth + "%";
-    document.getElementById("computer-score-bar").style.width = computerScoreBarWidth + "%";    
 }
 
 //Set the computer's score in the HTML
 function updateComputerScoreDisplay() {
     let computerScoreText = document.getElementById("computer-score");
     computerScoreText.innerText = computerScore;
-
-    playerScoreBarWidth -= scoreMoveAmount;
-    computerScoreBarWidth += scoreMoveAmount;
-
-    document.getElementById("player-score-bar").style.width = playerScoreBarWidth + "%";
-    document.getElementById("computer-score-bar").style.width = computerScoreBarWidth + "%";  
 }
