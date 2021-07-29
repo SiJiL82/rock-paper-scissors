@@ -1,6 +1,6 @@
 //All potential elements for the game
-let gameElements = ["rock","paper","scissors"];
-//,"lizard","spock"
+let gameElements = ["rock","paper","scissors","lizard","spock"];
+
 //Fight data - first item is the winner, 2nd the element it beats. 3rd item is the action for the fight.
 let fights = [
     [0, 2, "blunts"],
@@ -14,6 +14,9 @@ let fights = [
     [4, 2, "smashes"],
     [4, 0, "vapourises"]
 ]
+
+//Set how many of the elements should be used in the game
+let numActiveElements = 5;
 
 //Score variables for the player and computer
 let playerScore = 0;
