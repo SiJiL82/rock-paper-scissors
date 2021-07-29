@@ -140,6 +140,8 @@ function getRoundWinner() {
         }
         updateScoreBarDisplay();
     }
+    //Clear the pick highlighting after 1s
+    setTimeout(function(){clearPickedElements()}, 1800);
 }
 
 //Set the score bar so each player's score is a percentage of the total cumulated score
@@ -200,3 +202,8 @@ function updateComputerScoreDisplay() {
     computerScoreText.innerText = computerScore;
 }
 
+//Remove styling from picked elements
+function clearPickedElements() {
+    document.getElementById(playerPick).classList.remove("player-picked");
+    document.getElementById(computerPick).classList.remove("computer-picked");
+}
