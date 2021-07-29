@@ -120,3 +120,7 @@ header {
     border-color: rgb(var(--computer-highlight-colour), 1);
     border-radius: 0 2em 2em 0;
 }
+
+#result-text::first-letter{
+    text-transform: capitalize;
+}
