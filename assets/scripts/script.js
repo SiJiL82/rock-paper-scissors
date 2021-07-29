@@ -46,8 +46,8 @@ addElementButtonListeners();
 //Add a button for each element in the elements array
 function addElementButtons() {
     //Get the div on the main page to insert the buttons into
-    let buttonArea = document.getElementById("game-buttons")
-
+    let buttonArea = document.getElementById("game-buttons");
+    
     //Append to html string a button for each element
     let html = "";
 
@@ -56,7 +56,7 @@ function addElementButtons() {
     for(let i = 0; i < numActiveElements; i++) {
         let rotation = rotationStep * i;
         html += `
-            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(200px) rotate(-${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(375px) rotate(-${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `
     }
 
