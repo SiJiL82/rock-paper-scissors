@@ -209,6 +209,8 @@ function updateScoreBarDisplay() {
     if(computerScoreBarWidth === 0) {
         //Set border width on computer score to 0 to stop it contributing to the size of the element.
         computerScoreBarElement.style.borderWidth = "0px";
+        //Hide the score text too
+        computerScoreBarElement.style.color = (computerScoreTextColour.replace("rgb", "rgba")).replace(")", ", 0)");
         //Set the player score bar corners to rounded to match the CSS styling
         playerScoreBarElement.style.borderTopRightRadius = "2em";
         playerScoreBarElement.style.borderBottomRightRadius = "2em";
@@ -218,6 +220,7 @@ function updateScoreBarDisplay() {
         computerScoreBarElement.style.borderWidth = scoreBorderWidth;
         playerScoreBarElement.style.borderTopRightRadius = "unset";
         playerScoreBarElement.style.borderBottomRightRadius = "unset";
+        computerScoreBarElement.style.color = computerScoreTextColour;
     }
 
     //Set each score bar to its calculated width
