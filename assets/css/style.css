@@ -61,10 +61,20 @@ header {
     border-color: rgb(var(--player-highlight-colour), 1);
 }
 
+.player-picked-fadeout {
+    border-color: rgb(var(--player-highlight-colour), 0);
+    transition: 800ms linear;
+}
+
 .computer-picked {
     outline-style: solid;
     outline-width: 0.8rem;
     outline-color: rgb(var(--computer-highlight-colour), 1);
+}
+
+.computer-picked-fadeout {
+    outline-color: rgb(var(--computer-highlight-colour), 0);
+    transition: 800ms linear;
 }
 
 .score-area {

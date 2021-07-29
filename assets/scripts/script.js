@@ -141,7 +141,7 @@ function getRoundWinner() {
         updateScoreBarDisplay();
     }
     //Clear the pick highlighting after 1s
-    setTimeout(function(){clearPickedElements()}, 1800);
+    setTimeout(function(){clearPickedElements()}, 1000);
 }
 
 //Set the score bar so each player's score is a percentage of the total cumulated score
@@ -204,6 +204,24 @@ function updateComputerScoreDisplay() {
 
 //Remove styling from picked elements
 function clearPickedElements() {
-    document.getElementById(playerPick).classList.remove("player-picked");
-    document.getElementById(computerPick).classList.remove("computer-picked");
+    //Get the element that the player has picked
+    let playerPickedElement = document.getElementById(playerPick);
+    //Add the fadeout css class to the element
+    playerPickedElement.classList.add("player-picked-fadeout");
+    //After the fadeout has run, remove the class for it, and the player picked class.
+    //TODO: The timeout value should be grabbed from the CSS so it can be changed there and used here without needing to update it
+    setTimeout(function(){
+        playerPickedElement.classList.remove("player-picked-fadeout");
+        playerPickedElement.classList.remove("player-picked");
+    }, 810);
+
+    //Get the element that the computer has picked
+    let computerPickedElement = document.getElementById(computerPick);
+    //Add the computer fadeout css class to the element
+    computerPickedElement.classList.add("computer-picked-fadeout");
+    //After the fadeout has run, remove the class for it, and the computer picked class.
+    setTimeout(function(){
+        computerPickedElement.classList.remove("computer-picked-fadeout");
+        computerPickedElement.classList.remove("computer-picked");
+    }, 810);
 }
