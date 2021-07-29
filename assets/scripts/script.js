@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 5;
+let numActiveElements = 3;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -39,8 +39,6 @@ let computerPick;
 addElementButtons();
 addElementButtonListeners();
 
-
-
 //Add a button for each element in the elements array
 function addElementButtons() {
     //Get the div on the main page to insert the buttons into
@@ -48,11 +46,13 @@ function addElementButtons() {
 
     //Append to html string a button for each element
     let html = "";
-    for(let gameElement of gameElements) {
+    
+    for(let i = 0; i < numActiveElements; i++) {
         html += `
-            <button class="game-button" id="${gameElement}" type="button"><i class="fas fa-hand-${gameElement}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `
     }
+
     //Set the HTML on the page to the generated html string
     buttonArea.innerHTML = html;
 }
@@ -93,7 +93,7 @@ function highlightPickedElement(target) {
 //Get the computer picked element randomly.
 function computerPickElement() {
     //Set computerPick to a random element
-    computerPick = gameElements[Math.floor(Math.random() * gameElements.length)];
+    computerPick = gameElements[Math.floor(Math.random() * numActiveElements)];
     console.log(`Computer picked element: ${computerPick}`);
 }
 
