@@ -7,7 +7,9 @@
     --gamebutton-background-colour: 255, 255, 255;
     --gamebutton-colour: 96, 108, 47;
     --player-highlight-colour: 126, 242, 230;
+    --player-score-text-colour: 255, 0, 0;
     --computer-highlight-colour: 166, 61, 158;
+    --computer-score-text-colour: 0, 255, 0;
     --transparent: 0, 0, 0, 0;
     --picked-fadeout-time: 400ms;
 }
@@ -103,6 +105,7 @@ header {
     background-color: rgb(var(--player-highlight-colour), 1);
     border-radius: 2em 0 0 2em;
     text-align: right;
+    color: rgb(var(--player-score-text-colour), 1);
 }
 
 #computer-score-bar {
@@ -113,6 +116,7 @@ header {
     border-color: rgb(var(--computer-highlight-colour), 1);
     background-color: rgb(var(--computer-highlight-colour), 1);
     border-radius: 0 2em 2em 0;
+    color: rgb(var(--computer-score-text-colour), 1);
 }
 
 #result-text::first-letter{
