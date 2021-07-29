@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
 /* Variables */
 :root {
     --background-colour: 0, 56, 68;
@@ -7,11 +9,12 @@
     --gamebutton-background-colour: 255, 255, 255;
     --gamebutton-colour: 96, 108, 47;
     --player-highlight-colour: 126, 242, 230;
-    --player-score-text-colour: 255, 0, 0;
+    --player-score-text-colour: 166, 61, 158;
     --computer-highlight-colour: 166, 61, 158;
-    --computer-score-text-colour: 0, 255, 0;
+    --computer-score-text-colour: 126, 242, 230;
     --transparent: 0, 0, 0, 0;
     --picked-fadeout-time: 400ms;
+    --heading-font: "RocknRoll One", sans-serif;
 }
 
 /* Clear spacing and border values for all objects */
