@@ -44,6 +44,7 @@ header {
     font-size: 4rem;
     font-family: var(--heading-font);
     float: left;
+    text-transform: capitalize;
 }
 
 .game-button  {

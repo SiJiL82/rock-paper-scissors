@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 5;
+let numActiveElements = 3;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -48,6 +48,7 @@ let computerPick;
 //Initialise the game
 addElementButtons();
 addElementButtonListeners();
+setHeaderTitleText();
 
 //Add a button for each element in the elements array
 function addElementButtons() {
@@ -62,7 +63,7 @@ function addElementButtons() {
     for(let i = 0; i < numActiveElements; i++) {
         let rotation = rotationStep * i;
         html += `
-            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(375px) rotate(-${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(200px) rotate(-${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `
     }
 
@@ -76,7 +77,7 @@ function addElementButtonListeners() {
     let gameButtons = document.getElementsByClassName("game-button");
 
     for(let gameButton of gameButtons) {
-        gameButton.addEventListener("click", pickElement)
+        gameButton.addEventListener("click", pickElement);
     }
 }
 
@@ -86,8 +87,20 @@ function removeElementButtonListeners() {
     let gameButtons = document.getElementsByClassName("game-button");
 
     for(let gameButton of gameButtons) {
-        gameButton.removeEventListener("click", pickElement)
+        gameButton.removeEventListener("click", pickElement);
     }
+}
+
+function setHeaderTitleText() {
+    let headerElement = document.getElementsByTagName("header");
+    console.log(headerElement);
+    let html = "";
+    for(let i =  0; i < numActiveElements; i++) {
+        html += `
+            ${gameElements[i]} <br>
+        `;
+    }
+    headerElement[0].innerHTML = html;
 }
 
 //Main game function - called when the player clicks on an element.
