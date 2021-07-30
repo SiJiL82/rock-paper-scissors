@@ -12,6 +12,7 @@
     --player-score-text-colour: 166, 61, 158;
     --computer-highlight-colour: 166, 61, 158;
     --computer-score-text-colour: 126, 242, 230;
+    --tooltip-background-colour: 192, 192, 192;
     --transparent: 0, 0, 0, 0;
     --picked-fadeout-time: 400ms;
     --heading-font: "RocknRoll One", sans-serif;
@@ -26,7 +27,7 @@
 }
 
 body {
-    background-color: rgb(var(--background-colour), 1);
+    background-color: rgba(var(--background-colour), 1);
 }
 
 .grid-container {
@@ -42,7 +43,7 @@ body {
 
 header {
     grid-area: header;
-    color: rgb(var(--header-text-colour), 1);
+    color: rgba(var(--header-text-colour), 1);
     font-size: 4rem;
     font-family: var(--heading-font);
     text-transform: capitalize;
@@ -71,11 +72,11 @@ header {
 }
 
 #how-to-play-button {
-    background-color: rgb(var(--content-background-colour), 1);
+    background-color: rgba(var(--content-background-colour), 1);
     border-radius: 1em;
     padding: 20px;
     font-family: var(--button-font);
-    color:rgb(var(--background-colour), 1);
+    color:rgba(var(--background-colour), 1);
     font-weight: bolder;
     cursor: pointer;
 }
@@ -103,7 +104,7 @@ header {
 .game-area {
     width: 750px;
     height: 750px;
-    background-color: rgb(var(--content-background-colour), 1);
+    background-color: rgba(var(--content-background-colour), 1);
     border-radius: 2em;
     margin: 80px auto 0 auto;
     position: relative;
@@ -111,8 +112,8 @@ header {
 
 .game-button  {
     font-size: 8rem;
-    color: rgb(var(--gamebutton-colour), 1);
-    background-color: rgb(var(--gamebutton-background-colour), 1);
+    color: rgba(var(--gamebutton-colour), 1);
+    background-color: rgba(var(--gamebutton-background-colour), 1);
     margin-left: -6rem;
     width: 12rem;
     height: 12rem;
@@ -127,27 +128,27 @@ header {
 .player-picked {
     border-style: solid;
     border-width: 0.8rem;
-    border-color: rgb(var(--player-highlight-colour), 1);
+    border-color: rgba(var(--player-highlight-colour), 1);
 }
 
 .player-picked-fadeout {
-    border-color: rgb(var(--player-highlight-colour), 0);
+    border-color: rgba(var(--player-highlight-colour), 0);
     transition: var(--picked-fadeout-time) linear;
 }
 
 .computer-picked {
-    box-shadow: 0 0 0 0.8rem rgb(var(--computer-highlight-colour), 1);
+    box-shadow: 0 0 0 0.8rem rgba(var(--computer-highlight-colour), 1);
 }
 
 .computer-picked-fadeout {
-    box-shadow: 0 0 0 0.8rem rgb(var(--computer-highlight-colour), 0);
+    box-shadow: 0 0 0 0.8rem rgba(var(--computer-highlight-colour), 0);
     transition: var(--picked-fadeout-time) linear;
 }
 
 .score-area {
     width: 750px;
     height: 100px;
-    background-color: rgb(var(--content-background-colour), 1);
+    background-color: rgba(var(--content-background-colour), 1);
 
     border-radius: 2em;
     margin: 10px auto;
@@ -163,10 +164,10 @@ header {
 #player-score-bar {
     float: left;
     width: 50%;    
-    background-color: rgb(var(--player-highlight-colour), 1);
+    background-color: rgba(var(--player-highlight-colour), 1);
     border-radius: 2em 0 0 2em;
     text-align: right;
-    color: rgb(var(--player-score-text-colour), 1);
+    color: rgba(var(--player-score-text-colour), 1);
     padding-right: 5px;
 }
 
@@ -177,9 +178,9 @@ header {
 #computer-score-bar {
     float: right;
     width: 50%;    
-    background-color: rgb(var(--computer-highlight-colour), 1);
+    background-color: rgba(var(--computer-highlight-colour), 1);
     border-radius: 0 2em 2em 0;
-    color: rgb(var(--computer-score-text-colour), 1);
+    color: rgba(var(--computer-score-text-colour), 1);
     padding-left: 5px;
 }
 
@@ -190,7 +191,7 @@ header {
 #result-text {
     font-family: var(--heading-font);
     font-size: 2rem;
-    color: rgb(var(--background-colour), 1);
+    color: rgba(var(--background-colour), 1);
     text-align: center;
     top: 50%;
     position: relative;
@@ -203,7 +204,7 @@ header {
     display: none;
     width: 30em;
     padding: 10px;
-    background-color: silver;
+    background-color: rgba(var(--tooltip-background-colour), 1);
     position: absolute;
     z-index: 1;
     opacity: 0;
