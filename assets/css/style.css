@@ -135,3 +135,13 @@ header {
 #result-text::first-letter{
     text-transform: capitalize;
 }
+
+#result-text {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: rgb(var(--background-colour), 1);
+    text-align: center;
+    top: 50%;
+    position: relative;
+    margin-top: -1rem;
+}
