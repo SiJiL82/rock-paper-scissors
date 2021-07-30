@@ -66,7 +66,7 @@ header {
     margin-top: 50px;
 }
 
-.how-to-play-control {
+#how-to-play-control {
     grid-area: howtoplay;
 }
 
@@ -84,7 +84,7 @@ header {
     text-decoration: underline;
 }
 
-.difficulty-control {
+#difficulty-control {
     grid-area: difficulty;
 }
 
@@ -199,7 +199,7 @@ header {
     margin: 0 auto;
 }
 
-.how-to-play-control .how-to-play-tooltip {
+#how-to-play-control #how-to-play-tooltip {
     display: none;
     width: 30em;
     padding: 10px;
@@ -209,9 +209,4 @@ header {
     opacity: 0;
     transition: opacity 0.5s;
     margin-top: -20px;
-}
-
-.how-to-play-control:hover .how-to-play-tooltip {
-    display: unset;
-    opacity: 1;
 }

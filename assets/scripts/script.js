@@ -274,3 +274,18 @@ function clearPickedElements() {
         computerPickedElement.classList.remove("computer-picked");
     }, parseInt(pickedFadeoutTime) + 10);
 }
+
+document.getElementById("how-to-play-control").addEventListener("click", toggleHowToPlayTooltip);
+
+function toggleHowToPlayTooltip() {
+    let tooltip = document.getElementById("how-to-play-tooltip");
+    switch(tooltip.style.display) {
+        case "none":
+            tooltip.style.display = "unset";
+            tooltip.style.opacity = 1;
+            break;
+        default: 
+            tooltip.style.display = "none";
+            tooltip.style.opacity = 0;
+    };
+}
