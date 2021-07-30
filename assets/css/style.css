@@ -74,6 +74,9 @@ header {
     background-color: rgb(var(--content-background-colour), 1);
     border-radius: 1em;
     padding: 20px;
+    font-family: var(--button-font);
+    color:rgb(var(--background-colour), 1);
+    font-weight: bolder;
 }
 
 .difficulty-control {
