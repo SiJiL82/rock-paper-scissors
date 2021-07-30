@@ -40,13 +40,11 @@ body {
   }
 
 header {
+    grid-area: header;
     color: rgb(var(--header-text-colour), 1);
     font-size: 4rem;
     font-family: var(--heading-font);
-    float: left;
     text-transform: capitalize;
-    position: absolute;
-    top: 0;
 }
 
 .game-area {
