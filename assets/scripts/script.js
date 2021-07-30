@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 3;
+let numActiveElements = 5;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -59,11 +59,12 @@ function addElementButtons() {
     let html = "";
 
     let rotationStep = 360 / numActiveElements;
+    let marginTop = (-numActiveElements + 1) + "rem";
     
     for(let i = 0; i < numActiveElements; i++) {
         let rotation = rotationStep * i;
         html += `
-            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(-${rotation}deg) translate(0, -270px) rotate(${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(0, -270px) rotate(-${rotation}deg); margin-top: ${marginTop}"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `
     }
 
@@ -179,7 +180,6 @@ function getRoundWinner() {
             }
         }
         updateScoreBarDisplay();
-        setLeftMarginForText(resultDisplay);
     }
     //Stop letting the player click buttons until we've reset them
     removeElementButtonListeners();
@@ -278,9 +278,4 @@ function clearPickedElements() {
         computerPickedElement.classList.remove("computer-picked-fadeout");
         computerPickedElement.classList.remove("computer-picked");
     }, parseInt(pickedFadeoutTime) + 10);
-}
-
-function setLeftMarginForText(element) {
-    let halfStringLength = element.innerText.length / 2;
-    element.style.marginLeft = `-${halfStringLength}rem`;
 }
