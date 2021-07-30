@@ -35,8 +35,8 @@ body {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-      "Header Game ."
-      "Controls Game .";
+      "header game ."
+      "controls game .";
   }
 
 header {
