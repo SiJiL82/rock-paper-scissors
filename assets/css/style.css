@@ -26,7 +26,6 @@
 
 body {
     background-color: rgb(var(--background-colour), 1);
-    position: relative;
 }
 
 header {
