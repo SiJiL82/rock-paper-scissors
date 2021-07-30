@@ -28,6 +28,17 @@ body {
     background-color: rgb(var(--background-colour), 1);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 750px 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "Header Game ."
+      "Controls Game .";
+  }
+
 header {
     color: rgb(var(--header-text-colour), 1);
     font-size: 4rem;
