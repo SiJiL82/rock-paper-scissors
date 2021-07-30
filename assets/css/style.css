@@ -54,10 +54,14 @@ header {
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
-        ". HowToPlay ."
-        ". Difficulty ."
+        ". howtoplay ."
+        ". difficulty ."
         ". . .";
     grid-area: controls;
+}
+
+.how-to-play {
+    grid-area: howtoplay;
 }
 
 .game-area {
