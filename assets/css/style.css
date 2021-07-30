@@ -198,3 +198,20 @@ header {
     width: 50%;
     margin: 0 auto;
 }
+
+.how-to-play-control .how-to-play-tooltip {
+    display: none;
+    width: 30em;
+    padding: 10px;
+    background-color: silver;
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+    margin-top: -20px;
+}
+
+.how-to-play-control:hover .how-to-play-tooltip {
+    display: unset;
+    opacity: 1;
+}
