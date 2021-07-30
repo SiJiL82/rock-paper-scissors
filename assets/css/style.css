@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=RocknRoll+One&display=swap');
 
 /* Variables */
 :root {
@@ -15,6 +15,7 @@
     --transparent: 0, 0, 0, 0;
     --picked-fadeout-time: 400ms;
     --heading-font: "RocknRoll One", sans-serif;
+    --button-font: "Gowun Dodum", sans-serif;
 }
 
 /* Clear spacing and border values for all objects */
