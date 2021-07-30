@@ -47,6 +47,19 @@ header {
     text-transform: capitalize;
 }
 
+.controls {
+    display: grid;
+    grid-template-columns: 120px 140px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". HowToPlay ."
+        ". Difficulty ."
+        ". . .";
+    grid-area: controls;
+}
+
 .game-area {
     width: 750px;
     height: 750px;
