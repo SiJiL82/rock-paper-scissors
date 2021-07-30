@@ -202,6 +202,7 @@ header {
 
 #how-to-play-control #how-to-play-tooltip {
     display: none;
+    font-family: var(--button-font);
     width: 30em;
     padding: 10px;
     background-color: rgba(var(--tooltip-background-colour), 1);
@@ -210,4 +211,5 @@ header {
     opacity: 0;
     transition: opacity 0.5s;
     margin-top: -20px;
+    border-radius: 1em;
 }
