@@ -68,14 +68,23 @@ header {
     grid-area: difficulty;
 }
 
+.game {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 830px 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "."
+      "score";
+    grid-area: game;
+}
+
 .game-area {
     width: 750px;
     height: 750px;
-
     background-color: rgb(var(--content-background-colour), 1);
-
     border-radius: 2em;
-
     margin: 80px auto 0 auto;
     position: relative;
 }
