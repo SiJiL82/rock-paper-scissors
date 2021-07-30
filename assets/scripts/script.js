@@ -201,7 +201,6 @@ function updateScoreBarDisplay() {
     let computerScoreBarWidth = 100 - playerScoreBarWidth;
 
     //If the computer has won 100% of the rounds so far, hide the player score bar
-    //TODO: Get the elements once into variables and use those instead of finding them every time
     let playerScoreBarElement = document.getElementById("player-score-bar");
     let computerScoreBarElement = document.getElementById("computer-score-bar");
     //TODO: Create functions to replace the repeated code here.
@@ -264,7 +263,6 @@ function clearPickedElements() {
     //Add the fadeout css class to the element
     playerPickedElement.classList.add("player-picked-fadeout");
     //After the fadeout has run, remove the class for it, and the player picked class.
-    //TODO: The timeout value should be grabbed from the CSS so it can be changed there and used here without needing to update it
     setTimeout(function(){
         playerPickedElement.classList.remove("player-picked-fadeout");
         playerPickedElement.classList.remove("player-picked");
