@@ -80,6 +80,7 @@ function setNumActiveElements(num) {
     setHeaderTitleText();
     //Reset scores
     resetScores();
+    resetDifficultyControls();
 }
 
 //Reset player and computer scores to 0
@@ -349,4 +350,18 @@ function toggleHowToPlayTooltip() {
             tooltip.style.display = "none";
             tooltip.style.opacity = 0;
     };
+}
+
+//Set the difficulty selector highlighting to the correct one, as this doesn't update when the page refreshes
+function resetDifficultyControls() {
+    let selectors = document.getElementsByName("difficulty-selector");
+    //Loop through all radio buttons and set active if it is the correct button for the number of elements in the game.
+    for(let selector of selectors) {
+        if(selector.value == numActiveElements) {
+            selector.checked = true;
+        }
+        else {
+            selector.checked = false;
+        }
+    }
 }
