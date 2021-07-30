@@ -279,7 +279,7 @@ document.getElementById("how-to-play-control").addEventListener("click", toggleH
 
 function toggleHowToPlayTooltip() {
     let tooltip = document.getElementById("how-to-play-tooltip");
-    switch(tooltip.style.display) {
+    switch(window.getComputedStyle(tooltip).display) {
         case "none":
             tooltip.style.display = "unset";
             tooltip.style.opacity = 1;
