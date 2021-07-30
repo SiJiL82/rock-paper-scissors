@@ -333,10 +333,13 @@ function clearPickedElements() {
     }, parseInt(pickedFadeoutTime) + 10);
 }
 
+//Add listener to How To Play button
 document.getElementById("how-to-play-control").addEventListener("click", toggleHowToPlayTooltip);
 
+//Toggle showing the how to play tooltip
 function toggleHowToPlayTooltip() {
     let tooltip = document.getElementById("how-to-play-tooltip");
+    //Change the display mode to visible if currently not, and vice versa
     switch(window.getComputedStyle(tooltip).display) {
         case "none":
             tooltip.style.display = "unset";
