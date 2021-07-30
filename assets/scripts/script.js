@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 3;
+let numActiveElements = 5;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -63,7 +63,7 @@ function addElementButtons() {
     for(let i = 0; i < numActiveElements; i++) {
         let rotation = rotationStep * i;
         html += `
-            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(200px) rotate(-${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(-${rotation}deg) translate(0, -270px) rotate(${rotation}deg)"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `
     }
 
