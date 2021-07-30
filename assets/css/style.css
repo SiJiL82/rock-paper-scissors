@@ -60,11 +60,11 @@ header {
     grid-area: controls;
 }
 
-.how-to-play {
+.how-to-play-control {
     grid-area: howtoplay;
 }
 
-.difficulty {
+.difficulty-control {
     grid-area: difficulty;
 }
 
