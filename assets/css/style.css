@@ -77,6 +77,11 @@ header {
     font-family: var(--button-font);
     color:rgb(var(--background-colour), 1);
     font-weight: bolder;
+    cursor: pointer;
+}
+
+#how-to-play-button:hover {
+    text-decoration: underline;
 }
 
 .difficulty-control {
