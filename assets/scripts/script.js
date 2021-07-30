@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 5;
+let numActiveElements = 3;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -179,6 +179,7 @@ function getRoundWinner() {
             }
         }
         updateScoreBarDisplay();
+        setLeftMarginForText(resultDisplay);
     }
     //Stop letting the player click buttons until we've reset them
     removeElementButtonListeners();
@@ -277,4 +278,9 @@ function clearPickedElements() {
         computerPickedElement.classList.remove("computer-picked-fadeout");
         computerPickedElement.classList.remove("computer-picked");
     }, parseInt(pickedFadeoutTime) + 10);
+}
+
+function setLeftMarginForText(element) {
+    let halfStringLength = element.innerText.length / 2;
+    element.style.marginLeft = `-${halfStringLength}rem`;
 }
