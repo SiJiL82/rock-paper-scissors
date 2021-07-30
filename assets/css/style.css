@@ -26,6 +26,7 @@
 
 body {
     background-color: rgb(var(--background-colour), 1);
+    position: relative;
 }
 
 header {
@@ -34,6 +35,8 @@ header {
     font-family: var(--heading-font);
     float: left;
     text-transform: capitalize;
+    position: absolute;
+    top: 0;
 }
 
 .game-area {
@@ -140,4 +143,17 @@ header {
     margin-top: -1rem;
     width: 50%;
     margin: 0 auto;
+}
+
+.controls {
+    margin: 50px auto 0 auto;
+    width: 280px;
+    text-align: center;
+    float: left;
+}
+
+#how-to-play-button {
+    background-color: rgb(var(--content-background-colour), 1);
+    border-radius: 1em;
+    padding: 20px;
 }
