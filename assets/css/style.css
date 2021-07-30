@@ -100,7 +100,7 @@ header {
     height: 100%;
     box-sizing: border-box;
     font-family: var(--heading-font);
-    
+    line-height: 2;
 }
 
 #player-score-bar {
