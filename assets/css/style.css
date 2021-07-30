@@ -64,6 +64,10 @@ header {
     grid-area: howtoplay;
 }
 
+.difficulty {
+    grid-area: difficulty;
+}
+
 .game-area {
     width: 750px;
     height: 750px;
