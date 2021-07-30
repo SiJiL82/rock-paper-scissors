@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 5;
+let numActiveElements = 3;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -46,9 +46,50 @@ let playerPick;
 let computerPick;
 
 //Initialise the game
-addElementButtons();
-addElementButtonListeners();
-setHeaderTitleText();
+addListenersToDifficultySelector();
+setNumActiveElements(numActiveElements);
+
+//Add listeners to the difficulty selector radio buttons so they can be clicked on to set the difficulty
+function addListenersToDifficultySelector() {
+    //Get all the difficulty selector elements
+    let selectors = document.getElementsByName("difficulty-selector");
+    for(let selector of selectors) {
+        selector.addEventListener("click", setNumActiveElements);
+    }
+}
+
+//Set how many elements are active
+function setNumActiveElements(num) {
+    console.log(typeof(num));
+    //Remove any existing element button listeners
+    removeElementButtonListeners();
+    //Set to value passed to function for initial loading
+    if(typeof(num) === "number") {
+        numActiveElements = num;
+    }
+    else {
+        //Otherwise use the value in the radio button 
+        numActiveElements = this.value;
+    }
+    //Add the new number of element buttons.
+    //Don't need to remove the old ones because the whole HTML structure is replaced.
+    addElementButtons();
+    //Add listeners to the new element buttons
+    addElementButtonListeners();
+    //Update the header and title text
+    setHeaderTitleText();
+    //Reset scores
+    resetScores();
+}
+
+//Reset player and computer scores to 0
+function resetScores() {
+    playerScore = 0;
+    computerScore = 0;
+    updatePlayerScoreDisplay();
+    updateComputerScoreDisplay();
+    resetScoreBar();
+}
 
 //Add a button for each element in the elements array
 function addElementButtons() {
@@ -238,6 +279,23 @@ function updateScoreBarDisplay() {
     //Set each score bar to its calculated width
     playerScoreBarElement.style.width = playerScoreBarWidth + "%";
     computerScoreBarElement.style.width = computerScoreBarWidth + "%";
+}
+
+function resetScoreBar() {
+    let playerScoreBarElement = document.getElementById("player-score-bar");
+    let computerScoreBarElement = document.getElementById("computer-score-bar");
+    
+    playerScoreBarElement.style.width = "50%";
+    computerScoreBarElement.style.width = "50%";
+
+    playerScoreBarElement.style.display = "initial";
+    computerScoreBarElement.style.display = "initial";
+
+    playerScoreBarElement.style.borderTopRightRadius = "initial";
+    playerScoreBarElement.style.borderBottomRightRadius = "initial";
+
+    computerScoreBarElement.style.borderTopLeftRadius = "initial";
+    computerScoreBarElement.style.borderBottomLeftRadius = "initial";
 }
 
 //Set the player's score in the HTML
