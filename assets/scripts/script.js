@@ -226,7 +226,7 @@ function getRoundWinner() {
     //Stop letting the player click buttons until we've reset them
     removeElementButtonListeners();
     //Clear the pick highlighting
-    let clearHighlightingTime = 900;
+    let clearHighlightingTime = 2000;
     setTimeout(function(){clearPickedElements()}, clearHighlightingTime);
     //Re-enable buttons
     setTimeout(function(){addElementButtonListeners()}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
