@@ -204,7 +204,7 @@ header {
     display: none;
     font-family: var(--button-font);
     width: 30em;
-    padding: 10px;
+    padding: 10px 10px 10px 20px;
     background-color: rgba(var(--tooltip-background-colour), 1);
     position: absolute;
     z-index: 1;
@@ -212,4 +212,22 @@ header {
     transition: opacity 0.5s;
     margin-top: -20px;
     border-radius: 1em;
+    text-align: left;
+}
+
+#how-to-play-tooltip h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#how-to-play-tooltip .tooltip-player-colour {
+    color: rgba(var(--player-highlight-colour), 1);
+    font-size: 120%;
+    font-weight: bolder;
+}
+
+#how-to-play-tooltip .tooltip-computer-colour {
+    color: rgba(var(--computer-highlight-colour), 1);
+    font-size: 120%;
+    font-weight: bolder;
 }
