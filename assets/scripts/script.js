@@ -293,7 +293,6 @@ function updateScoreBarDisplay() {
     //If the computer has won 100% of the rounds so far, hide the player score bar
     let playerScoreBarElement = document.getElementById("player-score-bar");
     let computerScoreBarElement = document.getElementById("computer-score-bar");
-    //TODO: Create functions to replace the repeated code here.
     if(playerScoreBarWidth === 0) {
         //Hide the player score
         playerScoreBarElement.style.display = "none";
