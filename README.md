@@ -159,6 +159,11 @@ This does not affect normal usage of the site where the resolution is not being 
         ![CSS Validator Warnings](readme-assets/images/css-validation-warnings.png)  
         - The `Value Error : border-bottom Invalid RGB function ) `, `Invalid RGB function )` errors and `is an unknown vendor extension` warnings are due to the validator not supporting custom CSS properties, which have been a valid part of the CSS specification for a number of years, as per https://github.com/w3c/css-validator/pull/173  
         - The CSS in use that throws these errors is valid, legal CSS. 
+    - ### JavaScript
+        - [JS Hint](https://jshint.com/)
+        - No errors were found, and the following metrics were returned:  
+        ![JS Hint Results](readme-assets/images/jshint-results.png)
+
 ## Accessability Testing
 The site has been tested with the Lighthouse tool in Chrome Developer Tools to check for any accessibility issues, and received a 100% accessibility rating:
 ![Lighthouse Validation](readme-assets/images/lighthouse-validation.png)  
