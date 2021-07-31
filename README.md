@@ -129,6 +129,9 @@ The site and all functionality has been tested in the following browsers:
 ![Chrome Android Won Round](readme-assets/images/chrome-android-win.jpg)  
 ### Firefox on iPad
 Note that this was simulated using the Developer Tools in a desktop web browser
+![iPad Starting Game](readme-assets/images/ipad-start.png)  
+![iPad How To Play](readme-assets/images/ipad-how-to-play.png)  
+![iPad Won Round](readme-assets/images/ipad-win.png)  
 # Deployment
 
 # Credits
