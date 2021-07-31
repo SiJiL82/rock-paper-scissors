@@ -23,9 +23,6 @@ let numActiveElements = 3;
 let playerScore = 0;
 let computerScore = 0;
 
-//Get border width from stylesheet for the score bars, so we can set it back to this value after clearing it
-let playerScoreBar = document.getElementById("player-score-bar");
-
 //Get fadeout time CSS variable to use when resetting picked elements
 let pickedFadeoutTime = getComputedStyle(document.documentElement).getPropertyValue("--picked-fadeout-time");
 pickedFadeoutTime = pickedFadeoutTime.substring(0, pickedFadeoutTime.length - 2);
