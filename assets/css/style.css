@@ -283,18 +283,15 @@ header {
 /* Max screen width where header / controls and game can be positioned side by side */
 @media screen and (max-width: 910px) {
     .grid-container {
-        display: grid;
-        grid-template-columns: 240px 3fr;
+        grid-template-columns: 1fr 3fr;
         grid-template-rows: 44px 750px 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
         grid-template-areas:
           "header controls"
           "game game";
     }
 
     header {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .controls {
@@ -343,3 +340,4 @@ header {
         grid-template-rows: 750px 1fr;
     }
 }
+
