@@ -51,7 +51,7 @@ header {
 
 .controls {
     display: grid;
-    grid-template-columns: 120px 140px 1fr;
+    grid-template-columns: 110px 150px 1fr;
     grid-template-rows: 1fr 3fr 1fr;
     gap: 0px 0px;
     grid-auto-flow: row;
@@ -78,6 +78,7 @@ header {
     color:rgba(var(--background-colour), 1);
     font-weight: bolder;
     cursor: pointer;
+    font-size: 1.2rem;
 }
 
 #how-to-play-button:hover {
@@ -345,7 +346,6 @@ header {
         padding: 9px;
         height: auto;
         display: inline-block;
-        font-size: larger;
     }
 
     #difficulty-control {
