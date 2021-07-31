@@ -140,11 +140,18 @@ function setHeaderTitleText() {
     let headerElement = document.getElementsByTagName("header");
 
     let html = "";
+    let htmlSeparator = "<br>";
+    if(document.body.clientWidth <= 910) {
+        htmlSeparator = ", ";
+    }
     //Loop through the current game elements and add them to the HTML string
     for(let i =  0; i < numActiveElements; i++) {
-        html += `
-            ${gameElements[i]} <br>
-        `;
+        html += 
+`${gameElements[i]}${htmlSeparator}`;
+    }
+    //Trim trailing ", " after last element
+    if(html.substring(html.length-2, html.length) == ", ") {
+        html = html.substring(0, html.length - 2);
     }
     //Set header text to built string
     headerElement[0].innerHTML = html;
@@ -365,3 +372,5 @@ function resetDifficultyControls() {
         }
     }
 }
+
+console.log(document.body.clientWidth);
