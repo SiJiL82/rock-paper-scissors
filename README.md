@@ -18,8 +18,9 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [Game Outcome Display](#game-outcome-display)
     * [Score Bar](#score-bar)
     * [Next Round](#next-round)
-
+    * [Site Colour Palette](#site-colour-palette)
 * [Testing] (#testing)
+    * [User Story Testing](#user-story-testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
