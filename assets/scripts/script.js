@@ -384,11 +384,10 @@ function toggleHowToPlayTooltip() {
     switch(window.getComputedStyle(tooltip).display) {
         case "none":
             tooltip.style.display = "unset";
-            tooltip.style.opacity = 1;
             break;
         default: 
             tooltip.style.display = "none";
-            tooltip.style.opacity = 0;
+            break;
     };
 }
 
