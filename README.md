@@ -24,6 +24,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [Browser Testing](#browser-testing)
     * [Responsive Design Testing](#responsive-design-testing)
     * [Bugs](#bugs)
+    * [Validator Testing](#validator-testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
@@ -142,7 +143,9 @@ The site is fully responsive, and elements will re-arrange and resize to fit dif
 ![360x740](readme-assets/images/360x740.png)  
 ![768x1024](readme-assets/images/768x1024.png)  
 Note that if testing the site responsiveness in a browser and changing the resolution, the page will need to be refreshed after each resize to allow the javascript to position dynamic elements correctly.  
-This does not affect normal usage of the site where the resolution is not being freely resized.
+This does not affect normal usage of the site where the resolution is not being freely resized.  
+## Validator Testing
+The site has been tested 
 ## Bugs
 - __Known Issues__
     - There is 1 known issue with the site - when in a mobile / reduced width display where the How To Play and Difficulty boxes are beneath the main game area, the How To Play tooltip can be toggled by clicking in the empty space above the button, as well as on the button itself. 
