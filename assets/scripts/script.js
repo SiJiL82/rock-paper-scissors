@@ -101,13 +101,11 @@ function addElementButtons() {
     let marginTop = (-numActiveElements + 1) + "rem";
 
     let buttonTranslateOffset = buttonArea.clientWidth / 3;
-    console.log(document.body.clientWidth);
-    console.log(window.innerHeight);
-    if(document.body.clientWidth >= 750 && window.innerHeight >= 906) {
+    if(document.body.clientWidth >= 750) {
         for(let i = 0; i < numActiveElements; i++) {
             let rotation = rotationStep * i;
             html += `
-                <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(0, -${buttonTranslateOffset}px) rotate(-${rotation}deg); margin-top: ${marginTop}"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+                <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(0, -${buttonTranslateOffset}px) rotate(-${rotation}deg); "><i class="fas fa-hand-${gameElements[i]}"></i></button> 
             `
         }
     }
