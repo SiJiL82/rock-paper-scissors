@@ -18,6 +18,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [Game Outcome Display](#game-outcome-display)
     * [Score Bar](#score-bar)
     * [Next Round](#next-round)
+
 * [Testing] (#testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
@@ -85,6 +86,9 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     - After the delay, the highlighting on the picked elements fades out, and a new round is started.  
     - Players cannot click on a new element until the timeout has finished and the new round has been set up.  
     - The results text on the game area updates to say `Go!` to indicate to the player that the new round is ready.
+- ## Site Colour Palette
+    - The site uses CSS variables to define the colours used, meaning the colour palette can be easily updated to set a new theme, without having to individually change each element:  
+    ![CSS Colour Variables](readme-assets/images/css-colour-variables.png)
 
 # Testing
 
