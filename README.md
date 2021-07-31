@@ -21,6 +21,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [Site Colour Palette](#site-colour-palette)
 * [Testing] (#testing)
     * [User Story Testing](#user-story-testing)
+    * [Browser Testing](#browser-testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
@@ -104,7 +105,18 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     - Have the game difficulty increase as I win more games.
         - Rather than have an automatic difficulty increase as the player wins a certain number of games, the player can choose to change the game difficulty at any point.
         - This was implemented because the game is fundamentally a game of chance, meaning it is entirely possible for the player to never win a game, and therefore would not get to see the different game modes.
-
+## Browser Testing
+The site and all functionality has been tested in the following browsers:
+### Firefox on Windows Desktop
+![Firefox Desktop Starting Game](readme-assets/images/firefox-desktop-start-game.png)
+![Firefox Desktop How To Play](readme-assets/images/firefox-desktop-how-to-play.png)
+![Firefox Desktop Player Won](readme-assets/images/firefox-desktop-player-win.png)
+![Firefox Desktop Five Elements](readme-assets/images/firefox-desktop-five-elements.png)
+### Firefox on Android
+### Chrome on Windows Desktop
+### Chrome on Android
+### Firefox on iPad
+Note that this was simulated using the Developer Tools in a desktop web browser
 # Deployment
 
 # Credits
