@@ -167,6 +167,18 @@ The site has been tested with the Lighthouse tool in Chrome Developer Tools to c
     - There is 1 known issue with the site - when in a mobile / reduced width display where the How To Play and Difficulty boxes are beneath the main game area, the How To Play tooltip can be toggled by clicking in the empty space above the button, as well as on the button itself. 
         - This space is a margin, and therefore should not trigger a click event, so it is unknown as to why this occurs.
 # Deployment
+- __To view the deployed project:__
+    - The project is currently deployed to GitHub pages and can be viewed at https://sijil82.github.io/rock-paper-scissors/
+- __To deploy a copy of the project:__
+    - Open the GitHub repository at https://github.com/SiJiL82/rock-paper-scissors
+    - Click the "Code" button and clone the repository locally.
+    - Set the remote repository in your local clone with the command: `git remote set-url origin http://github.com/YOU/YOUR_REPO`
+    - In the GitHub repository, click on the Settings button.
+    - Click the Pages tab on the left-hand menu.
+    - Select "Master" or "Main" from the Source drop down list.
+    - Click Save.
+    - GitHub will build and publish the site and provide a link to the public facing address.
+        - Note that this can take up to 5 minutes to fully deploy.
 
 # Credits
 https://stackoverflow.com/questions/50149925/click-event-target-gives-element-or-its-child-not-parent-element
