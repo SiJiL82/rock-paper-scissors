@@ -284,7 +284,7 @@ header {
 @media screen and (max-width: 910px) {
     .grid-container {
         grid-template-columns: 1fr 3fr;
-        grid-template-rows: 44px 750px 1fr;
+        grid-template-rows: 44px 750px;
         grid-template-areas:
           "header controls"
           "game game";
@@ -341,3 +341,51 @@ header {
     }
 }
 
+@media screen and (max-width: 750px) {
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 44px 1fr;
+        grid-template-areas:
+          "header controls"
+          "game game";
+    }
+
+    .game {
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .game-area {
+        width: 100vw;
+        margin: 0 auto 0 auto;
+        text-align: center;
+        height: unset;
+    }
+
+    .score-area {
+        width: 100vw;
+    }
+
+    .game-button  {
+        font-size: 5rem;
+        width: 8rem;
+        height: 8rem;
+        display: inline-block;
+        position: unset;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 12px;
+    }
+
+    #result-text {
+        top: unset;
+    }
+
+    .score-text {
+        font-size: 1.5rem;
+    }
+
+    .score-bar {
+        line-height: 4;
+    }
+
+}
