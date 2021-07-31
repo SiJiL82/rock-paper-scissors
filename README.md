@@ -27,8 +27,12 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
 ### Index Page
 ![Index Page Mockup](readme-assets/images/index-layout.png)
 
-
 # Features
+- __Header Text__
+    - The main title for the site, this updates dynamically based on which game mode is chosen:  
+    ![Header With 5 Elements](readme-assets/images/header-five-elements.png)
+    ![Header With 3 Elements](readme-assets/images/header-three-elements.png)
+
 
 # Testing
 
