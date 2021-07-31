@@ -3,15 +3,15 @@
 /* Variables */
 :root {
     --background-colour: 0, 56, 68;
-    --content-background-colour: 192, 160, 26;
+    --content-background-colour: 116, 146, 219;
     --header-text-colour: 255, 235, 198;
     --content-text-colour: 255, 255, 255;
     --gamebutton-background-colour: 255, 255, 255;
     --gamebutton-colour: 96, 108, 47;
-    --player-highlight-colour: 126, 242, 230;
-    --player-score-text-colour: 166, 61, 158;
-    --computer-highlight-colour: 166, 61, 158;
-    --computer-score-text-colour: 126, 242, 230;
+    --player-highlight-colour: 250, 209, 107;
+    --player-score-text-colour: 136, 3, 176;
+    --computer-highlight-colour: 136, 3, 176;
+    --computer-score-text-colour: 250, 209, 107;
     --tooltip-background-colour: 192, 192, 192;
     --transparent: 0, 0, 0, 0;
     --picked-fadeout-time: 400ms;
