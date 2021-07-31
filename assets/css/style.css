@@ -153,6 +153,10 @@ header {
     margin: 10px auto;
 }
 
+.score {
+    grid-area: score;
+}
+
 .score-bar {
     height: 100%;
     box-sizing: border-box;
@@ -295,14 +299,10 @@ header {
     }
 
     .controls {
-        display: grid;
         grid-template-columns: 200px 360px 1fr;
         grid-template-rows: 1fr;
-        gap: 0px 0px;
-        grid-auto-flow: row;
         grid-template-areas:
             "howtoplay difficulty .";
-        grid-area: controls;
     }
 
     .controls div {
@@ -343,15 +343,16 @@ header {
 
 @media screen and (max-width: 750px) {
     .grid-container {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 44px 1fr;
+        grid-template-columns: 1fr;
+        grid-template-rows: 44px 1fr 1fr;
         grid-template-areas:
-          "header controls"
-          "game game";
+          "header"
+          "game"
+          "controls";
     }
 
     .game {
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 120px;
     }
 
     .game-area {
@@ -378,6 +379,7 @@ header {
 
     #result-text {
         top: unset;
+        width: 90%;
     }
 
     .score-text {
@@ -388,4 +390,31 @@ header {
         line-height: 4;
     }
 
+    .controls {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "howtoplay difficulty";
+    }
+
+    #difficulty-control h3 {
+        display: block;
+    }
+
+    #difficulty-control {
+        padding: 0px;
+        height: 130px;
+    }
+
+    #how-to-play-tooltip h2 {
+        font-size: 1rem;
+    }
+
+    #how-to-play-control #how-to-play-tooltip {
+        margin-top: 0;
+        margin-left: 0;
+        top: 0;
+        left: 0;
+        width: 96vw;
+    }
 }
