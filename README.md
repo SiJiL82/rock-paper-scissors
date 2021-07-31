@@ -61,6 +61,11 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     ![Computer Picked Element](readme-assets/images/computer-picked-highlight.png)
     - The player highlighting is made inside the button, whereas the computer highlighting is outside it. This means if both players pick the same button, the highlighting for each is still visible:  
     ![Bot Picked Element](readme-assets/images/both-picked-highlight.png)
+- __Game Outcome Display__
+    - At the end of each round, the game will update the display text on the game area to show the outcome.
+    - The game elements and the winning action are shown, along with which player won:  
+    ![Round Outcome Text](readme-assets/images/computer-win-result-text.png)
+    - If both players pick the same element, the text will display `Draw!`  
 
 
 # Testing
