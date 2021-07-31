@@ -98,7 +98,6 @@ function addElementButtons() {
     let html = "";
 
     let rotationStep = 360 / numActiveElements;
-    let marginTop = (-numActiveElements + 1) + "rem";
 
     let buttonTranslateOffset = buttonArea.clientWidth / 3;
     if(document.body.clientWidth >= 750) {
