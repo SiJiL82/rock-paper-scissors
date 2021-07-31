@@ -19,15 +19,16 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [Score Bar](#score-bar)
     * [Next Round](#next-round)
     * [Site Colour Palette](#site-colour-palette)
-* [Testing] (#testing)
+* [Testing](#testing)
     * [User Story Testing](#user-story-testing)
     * [Browser Testing](#browser-testing)
     * [Responsive Design Testing](#responsive-design-testing)
     * [Bugs](#bugs)
     * [Validator Testing](#validator-testing)
     * [Accessability Testing](#accessability-testing)
-* [Deployment] (#deployment)
-* [Credits] (#credits)
+    * [Bugs](#bugs)
+* [Deployment](#deployment)
+* [Credits](#credits)
 
 # Design
 ## User Stories
