@@ -91,6 +91,18 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     ![CSS Colour Variables](readme-assets/images/css-colour-variables.png)
 
 # Testing
+## User Story Testing
+- __As a user of the site, I want to:__
+    - Easily see how to play the game.
+        - The game uses clear icons matching the hand shapes made when playing the game in person to represent each icon. This makes choosing which icon to pick intuitive.
+        - A clearly labelled "How To Play" button pops out detailed instructions, should the user need them.  
+    - Be able to navigate the site intuitively.
+        - The site is a single page, with minimal navigational elements. 
+    - See my score.
+        - The game includes a score bar that automatically updates to show the player their score, as each round completes.  
+    - Have the game difficulty increase as I win more games.
+        - Rather than have an automatic difficulty increase as the player wins a certain number of games, the player can choose to change the game difficulty at any point.
+        - This was implemented because the game is fundamentally a game of chance, meaning it is entirely possible for the player to never win a game, and therefore would not get to see the different game modes.
 
 # Deployment
 
