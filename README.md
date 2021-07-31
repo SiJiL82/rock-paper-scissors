@@ -25,6 +25,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [Responsive Design Testing](#responsive-design-testing)
     * [Bugs](#bugs)
     * [Validator Testing](#validator-testing)
+    * [Accessability Testing](#accessability-testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
@@ -157,6 +158,10 @@ This does not affect normal usage of the site where the resolution is not being 
         ![CSS Validator Warnings](readme-assets/images/css-validation-warnings.png)  
         - The `Value Error : border-bottom Invalid RGB function ) `, `Invalid RGB function )` errors and `is an unknown vendor extension` warnings are due to the validator not supporting custom CSS properties, which have been a valid part of the CSS specification for a number of years, as per https://github.com/w3c/css-validator/pull/173  
         - The CSS in use that throws these errors is valid, legal CSS. 
+## Accessability Testing
+The site has been tested with the Lighthouse tool in Chrome Developer Tools to check for any accessibility issues, and received a 100% accessibility rating:
+![Lighthouse Validation](readme-assets/images/lighthouse-validation.png)  
+
 ## Bugs
 - __Known Issues__
     - There is 1 known issue with the site - when in a mobile / reduced width display where the How To Play and Difficulty boxes are beneath the main game area, the How To Play tooltip can be toggled by clicking in the empty space above the button, as well as on the button itself. 
