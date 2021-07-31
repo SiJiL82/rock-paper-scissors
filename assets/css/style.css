@@ -260,6 +260,7 @@ header {
     border-radius: 1em;
     line-height: 2.5;
     cursor: pointer;
+    font-weight: bolder;
 }
 
 #difficulty-control input[type="radio"]:checked+label {
