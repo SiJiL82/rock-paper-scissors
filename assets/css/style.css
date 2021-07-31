@@ -345,6 +345,7 @@ header {
         padding: 9px;
         height: auto;
         display: inline-block;
+        font-size: larger;
     }
 
     #difficulty-control {
@@ -376,6 +377,7 @@ header {
     }
 }
 
+/* Screens with low width */
 @media screen and (max-width: 750px) {
     .grid-container {
         grid-template-columns: 1fr;
