@@ -32,6 +32,9 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     - The main title for the site, this updates dynamically based on which game mode is chosen:  
     ![Header With 5 Elements](readme-assets/images/header-five-elements.png)
     ![Header With 3 Elements](readme-assets/images/header-three-elements.png)
+- __How To Play Button__
+    - A button labelled with "How To Play" can be clicked to pop a set of instructions to the user, explaining how to play the game.  
+    ![How To Play Button And Tooltip](readme-assets/images/how-to-play-tooltip.png)
 
 
 # Testing
