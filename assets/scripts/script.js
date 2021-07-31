@@ -155,6 +155,25 @@ function setHeaderTitleText() {
     }
     //Set header text to built string
     headerElement[0].innerHTML = html;
+
+    //Set title text
+    //Clear already used html string
+    html = "";
+    //Set word separator to comma
+    htmlSeparator = ", ";
+    //Loop through current game elements
+    for(let i =  0; i < numActiveElements; i++) {
+        //Set the first character of the element to uppercase and append to string
+        let elementName = gameElements[i][0].toUpperCase() + gameElements[i].substring(1);
+        html += 
+`${elementName}${htmlSeparator}`;
+    }
+    //Trim trailing ", " after last element
+    if(html.substring(html.length-2, html.length) == ", ") {
+        html = html.substring(0, html.length - 2);
+    }
+    //Set the window title.
+    document.title = html;
 }
 
 //Main game function - called when the player clicks on an element.
