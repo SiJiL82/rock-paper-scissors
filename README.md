@@ -47,6 +47,11 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     ![Game with 3 Elements Chosen](readme-assets/images/game-three-elements.png)  
     #### 5 Elements Game:
     ![Game with 5 Elements Chosen](readme-assets/images/game-five-elements.png)  
+    - The code for the game allows this to be easily expanded on.  
+        - The `gameElements` array controls the total number of possible elements.
+        - The `fights` array details for each possible combination which element will win (the first item in the array), which element will lose (the second item) and the action performed to win the fight. 
+        - Extra button elements will also need to be added to let the user control how many elements are in the game.  
+    ![Game Element Code Arrays](readme-assets/images/element-definition-code.png)
 
 
 # Testing
