@@ -344,7 +344,7 @@ header {
         padding: 9px;
         height: auto;
         display: inline-block;
-        margin-top: 84px;
+        margin-top: 0;
     }
 
     #difficulty-control {
@@ -458,5 +458,9 @@ header {
         top: 0;
         left: 0;
         width: 100vw;
+    }
+
+    #how-to-play-button {
+        margin-top: 84px;
     }
 }
