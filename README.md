@@ -23,6 +23,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     * [User Story Testing](#user-story-testing)
     * [Browser Testing](#browser-testing)
     * [Responsive Design Testing](#responsive-design-testing)
+    * [Bugs](#bugs)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
@@ -142,7 +143,10 @@ The site is fully responsive, and elements will re-arrange and resize to fit dif
 ![768x1024](readme-assets/images/768x1024.png)  
 Note that if testing the site responsiveness in a browser and changing the resolution, the page will need to be refreshed after each resize to allow the javascript to position dynamic elements correctly.  
 This does not affect normal usage of the site where the resolution is not being freely resized.
-
+## Bugs
+- __Known Issues__
+    - There is 1 known issue with the site - when in a mobile / reduced width display where the How To Play and Difficulty boxes are beneath the main game area, the How To Play tooltip can be toggled by clicking in the empty space above the button, as well as on the button itself. 
+        - This space is a margin, and therefore should not trigger a click event, so it is unknown as to why this occurs.
 # Deployment
 
 # Credits
