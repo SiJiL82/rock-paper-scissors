@@ -22,6 +22,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
 * [Testing] (#testing)
     * [User Story Testing](#user-story-testing)
     * [Browser Testing](#browser-testing)
+    * [Responsive Design Testing](#responsive-design-testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
 
@@ -132,6 +133,16 @@ Note that this was simulated using the Developer Tools in a desktop web browser
 ![iPad Starting Game](readme-assets/images/ipad-start.png)  
 ![iPad How To Play](readme-assets/images/ipad-how-to-play.png)  
 ![iPad Won Round](readme-assets/images/ipad-win.png)  
+## Responsive Design Testing
+The site is fully responsive, and elements will re-arrange and resize to fit different resolution and orientation screens:
+### 1920x1080
+![1920x1080](readme-assets/images/1920x1080.png)  
+![1280x802](readme-assets/images/1280x802.png)  
+![360x740](readme-assets/images/360x740.png)  
+![768x1024](readme-assets/images/768x1024.png)  
+Note that if testing the site responsiveness in a browser and changing the resolution, the page will need to be refreshed after each resize to allow the javascript to position dynamic elements correctly.  
+This does not affect normal usage of the site where the resolution is not being freely resized.
+
 # Deployment
 
 # Credits
