@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 5;
+let numActiveElements = 3;
 
 //Score variables for the player and computer
 let playerScore = 0;
