@@ -285,6 +285,14 @@ header {
     .game-button {
         margin-top: -5rem;
     }
+
+    #how-to-play-control #how-to-play-tooltip {
+        margin-top: -200px;
+    }
+
+    .controls div {
+        margin-top: 20px;
+    }
 }
 
 
