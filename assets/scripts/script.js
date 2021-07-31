@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 //All potential elements for the game
 let gameElements = ["rock","paper","scissors","lizard","spock"];
 
@@ -13,7 +14,7 @@ let fights = [
     [3, 4, "poisons"],
     [4, 2, "smashes"],
     [4, 0, "vapourises"]
-]
+];
 
 //Set how many of the elements should be used in the game
 let numActiveElements = 3;
@@ -106,14 +107,14 @@ function addElementButtons() {
             let rotation = rotationStep * i;
             html += `
                 <button class="game-button" id="${gameElements[i]}" type="button" aria-label="${gameElements[i]} button" style="transform: rotate(${rotation}deg) translate(0, -${buttonTranslateOffset}px) rotate(-${rotation}deg); "><i class="fas fa-hand-${gameElements[i]}"></i></button> 
-            `
+            `;
         }
     }
     else {
         for(let i = 0; i < numActiveElements; i++) {
             html += `
             <button class="game-button" id="${gameElements[i]}" type="button" aria-label="${gameElements[i]} button"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
-        `            
+        `;
         }
     }
 
@@ -274,9 +275,9 @@ function getRoundWinner() {
     removeElementButtonListeners();
     //Clear the pick highlighting
     let clearHighlightingTime = 2000;
-    setTimeout(function(){clearPickedElements()}, clearHighlightingTime);
+    setTimeout(function(){clearPickedElements();}, clearHighlightingTime);
     //Re-enable buttons
-    setTimeout(function(){addElementButtonListeners()}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
+    setTimeout(function(){addElementButtonListeners();}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
     //Change center display text to let user know the next round can start
     setTimeout(function(){document.getElementById("result-text").innerHTML = "Go!<br><br>";}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
 }
@@ -396,7 +397,7 @@ function toggleHowToPlayTooltip() {
         default: 
             tooltip.style.display = "none";
             break;
-    };
+    }
 }
 
 //Set the difficulty selector highlighting to the correct one, as this doesn't update when the page refreshes
