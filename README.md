@@ -4,6 +4,8 @@ This project is an HTML page with CSS styling and dynamic JavaScript content tha
 
 ![Responsive Design Screenshot](readme-assets/images/responsive-screenshot.png)
 
+The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/rock-paper-scissors/)
+
 ## Table of Contents
 * [Design](#design)
     * [User Stories](#user-stories)
