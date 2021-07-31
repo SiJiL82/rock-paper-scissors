@@ -387,7 +387,7 @@ header {
     }
 
     .game {
-        grid-template-rows: 1fr 120px;
+        grid-template-rows: 1fr 80px;
     }
 
     .game-area {
@@ -424,7 +424,11 @@ header {
     }
 
     .score-bar {
-        line-height: 4;
+        line-height: 2.5;
+    }
+
+    .score-area {
+        height: 60px;
     }
 
     .controls {
