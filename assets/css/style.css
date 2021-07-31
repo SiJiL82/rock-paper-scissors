@@ -216,6 +216,7 @@ header {
     margin-top: -20px;
     border-radius: 1em;
     text-align: left;
+    box-sizing: border-box;
 }
 
 #how-to-play-tooltip h2 {
@@ -339,6 +340,10 @@ header {
     .game {
         grid-template-rows: 750px 1fr;
     }
+
+    #result-text {
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (max-width: 750px) {
@@ -380,6 +385,8 @@ header {
     #result-text {
         top: unset;
         width: 90%;
+        font-size: 1rem;
+        margin-top: 5px
     }
 
     .score-text {
@@ -415,6 +422,6 @@ header {
         margin-left: 0;
         top: 0;
         left: 0;
-        width: 96vw;
+        width: 100vw;
     }
 }
