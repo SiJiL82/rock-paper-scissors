@@ -10,7 +10,14 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
 * [Design](#design)
     * [User Stories](#user-stories)
     * [Site Mockups](#site-mockups)
-* [Features] (#features)
+* [Features](#features)
+    * [Header Text](#header-text)
+    * [How To Play Button](#how-to-play-button)
+    * [Different Game Modes](#different-game-modes)
+    * [Picking an Element](#picking-an-element)
+    * [Game Outcome Display](#game-outcome-display)
+    * [Score Bar](#score-bar)
+    * [Next Round](#next-round)
 * [Testing] (#testing)
 * [Deployment] (#deployment)
 * [Credits] (#credits)
@@ -28,14 +35,14 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
 ![Index Page Mockup](readme-assets/images/index-layout.png)
 
 # Features
-- __Header Text__
+- ## Header Text
     - The main title for the site, this updates dynamically based on which game mode is chosen:  
     ![Header With 5 Elements](readme-assets/images/header-five-elements.png)
     ![Header With 3 Elements](readme-assets/images/header-three-elements.png)
-- __How To Play Button__
+- ## How To Play Button
     - A button labelled with "How To Play" can be clicked to pop a set of instructions to the user, explaining how to play the game.  
     ![How To Play Button And Tooltip](readme-assets/images/how-to-play-tooltip.png)
-- __Different Game Modes__
+- ## Different Game Modes
     - The player can choose between 3 or 5 elements to play the game with.  
     - Choosing 3 elements gives the user the choice of Rock, Paper or Scissors.  
     - Choosing 5 elements additionally includes Lizard and Spock. 
@@ -52,7 +59,7 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
         - The `fights` array details for each possible combination which element will win (the first item in the array), which element will lose (the second item) and the action performed to win the fight. 
         - Extra button elements will also need to be added to let the user control how many elements are in the game.  
     ![Game Element Code Arrays](readme-assets/images/element-definition-code.png)
-- __Picking an Element__
+- ## Picking an Element
     - The player can click whichever element they which to use for a round, and when they do so the computer will pick a random element.  
     - The game will then use the `fights` array to determine which of the 2 elements will win the fight.  
     - When the user picks an element, it is highlighted on the game board with a coloured ring around the element:  
@@ -61,12 +68,23 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
     ![Computer Picked Element](readme-assets/images/computer-picked-highlight.png)
     - The player highlighting is made inside the button, whereas the computer highlighting is outside it. This means if both players pick the same button, the highlighting for each is still visible:  
     ![Bot Picked Element](readme-assets/images/both-picked-highlight.png)
-- __Game Outcome Display__
+- ## Game Outcome Display
     - At the end of each round, the game will update the display text on the game area to show the outcome.
     - The game elements and the winning action are shown, along with which player won:  
     ![Round Outcome Text](readme-assets/images/computer-win-result-text.png)
     - If both players pick the same element, the text will display `Draw!`  
-
+- ## Score Bar
+    - Under the game play area is a score bar, showing how many rounds each player has won.  
+    - At the end of each round, if either player won the round their score is updated.  
+    - The score bar shifts each player's highlighted area left and right as the percentage of rounds they have won changes. 
+    - For example, here the computer has won 66% of the rounds, and their score bar has increased to 66% of the total score bar size:  
+    ![Score Bar Computer Winning](readme-assets/images/score-bar-computer-winning.png)
+    - The colouring of the score bar matches the highlighting used to show the elements each player has picked.  
+- ## Next Round
+    - After the fight has completed, the results shown and the score updated, a short delay occurs (2 seconds) to allow the player to read the game information.
+    - After the delay, the highlighting on the picked elements fades out, and a new round is started.  
+    - Players cannot click on a new element until the timeout has finished and the new round has been set up.  
+    - The results text on the game area updates to say `Go!` to indicate to the player that the new round is ready.
 
 # Testing
 
