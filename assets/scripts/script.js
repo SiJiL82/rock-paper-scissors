@@ -298,7 +298,6 @@ function updateScoreBarDisplay() {
         //Hide the player score
         playerScoreBarElement.style.display = "none";
         //Set the computer score bar corners to rounded to match the CSS styling
-        //TODO: Get this value from the stylesheet and apply it dynamically so we can change the styling and not have to change this code too
         computerScoreBarElement.style.borderTopLeftRadius = "2em";
         computerScoreBarElement.style.borderBottomLeftRadius = "2em";
     }
@@ -307,7 +306,6 @@ function updateScoreBarDisplay() {
         playerScoreBarElement.style.display = "initial";
         computerScoreBarElement.style.borderTopLeftRadius = "initial";
         computerScoreBarElement.style.borderBottomLeftRadius = "initial";
-
     }
     //If the player has won 100% of the rounds so far, hide the computer score bar
     if(computerScoreBarWidth === 0) {
@@ -330,15 +328,19 @@ function updateScoreBarDisplay() {
 }
 
 function resetScoreBar() {
+    //Get bot score bars
     let playerScoreBarElement = document.getElementById("player-score-bar");
     let computerScoreBarElement = document.getElementById("computer-score-bar");
     
+    //Set each score bar to 50% of available space
     playerScoreBarElement.style.width = "50%";
     computerScoreBarElement.style.width = "50%";
 
+    //Set display to initial to reset any hidden elements
     playerScoreBarElement.style.display = "initial";
     computerScoreBarElement.style.display = "initial";
 
+    //Set border radius to initial to clear any adjusted for when a player has won 100% of matches and filled the whole bar
     playerScoreBarElement.style.borderTopRightRadius = "initial";
     playerScoreBarElement.style.borderBottomRightRadius = "initial";
 
