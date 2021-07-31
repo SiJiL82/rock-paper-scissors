@@ -153,14 +153,23 @@ function setHeaderTitleText() {
     if(document.body.clientWidth <= 910) {
         htmlSeparator = ", ";
     }
-    //Loop through the current game elements and add them to the HTML string
-    for(let i =  0; i < numActiveElements; i++) {
-        html += 
-`${gameElements[i]}${htmlSeparator}`;
+    if(document.body.clientWidth <= 746) {
+        htmlSeparator = ":";
+        for(let i =  0; i < numActiveElements; i++) {
+            html += 
+`${gameElements[i].substring(0, 1).toUpperCase()}${htmlSeparator}`;
+        }
     }
-    //Trim trailing ", " after last element
-    if(html.substring(html.length-2, html.length) == ", ") {
-        html = html.substring(0, html.length - 2);
+    else {
+        //Loop through the current game elements and add them to the HTML string
+        for(let i =  0; i < numActiveElements; i++) {
+            html += 
+`${gameElements[i]}${htmlSeparator}`;
+        }
+        //Trim trailing ", " after last element
+        if(html.substring(html.length-2, html.length) == ", ") {
+            html = html.substring(0, html.length - 2);
+        }
     }
     //Set header text to built string
     headerElement[0].innerHTML = html;
