@@ -23,10 +23,6 @@ let numActiveElements = 3;
 let playerScore = 0;
 let computerScore = 0;
 
-//Score Bar Initial Widths
-let playerScoreBarWidth = 50;
-let computerScoreBarWidth = 50;
-
 //Get border width from stylesheet for the score bars, so we can set it back to this value after clearing it
 let playerScoreBar = document.getElementById("player-score-bar");
 //This needs to be one of the border edges rather than the "border" pseudo-property
