@@ -259,3 +259,11 @@ header {
 #difficulty-control input[type="radio"]:checked+label {
     background-color: rgba(var(--header-text-colour), 1);
 }
+
+/* Screen width that starts the right edge from reducing down */
+@media screen and (max-width: 1320px) {
+    /* Center the controls content under the header */
+    .controls {
+        grid-template-columns: 1fr 140px 1fr;
+    }
+}
