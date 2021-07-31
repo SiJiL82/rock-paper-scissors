@@ -25,12 +25,6 @@ let computerScore = 0;
 
 //Get border width from stylesheet for the score bars, so we can set it back to this value after clearing it
 let playerScoreBar = document.getElementById("player-score-bar");
-//This needs to be one of the border edges rather than the "border" pseudo-property
-let scoreBorderWidth = window.getComputedStyle(playerScoreBar).borderTopWidth;
-
-//Get score bar text colours from CSS
-let playerScoreTextColour = window.getComputedStyle(playerScoreBar).color;
-let computerScoreTextColour = window.getComputedStyle(document.getElementById("computer-score-bar")).color;
 
 //Get fadeout time CSS variable to use when resetting picked elements
 let pickedFadeoutTime = getComputedStyle(document.documentElement).getPropertyValue("--picked-fadeout-time");
