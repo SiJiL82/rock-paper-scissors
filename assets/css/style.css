@@ -195,7 +195,7 @@ header {
 
 #result-text {
     font-family: var(--heading-font);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: rgba(var(--background-colour), 1);
     text-align: center;
     top: 50%;
