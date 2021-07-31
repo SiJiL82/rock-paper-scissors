@@ -108,10 +108,10 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
 ## Browser Testing
 The site and all functionality has been tested in the following browsers:
 ### Firefox on Windows Desktop
-![Firefox Desktop Starting Game](readme-assets/images/firefox-desktop-start-game.png)
-![Firefox Desktop How To Play](readme-assets/images/firefox-desktop-how-to-play.png)
-![Firefox Desktop Player Won](readme-assets/images/firefox-desktop-player-win.png)
-![Firefox Desktop Five Elements](readme-assets/images/firefox-desktop-five-elements.png)
+![Firefox Desktop Starting Game](readme-assets/images/firefox-desktop-start-game.png)  
+![Firefox Desktop How To Play](readme-assets/images/firefox-desktop-how-to-play.png)  
+![Firefox Desktop Player Won](readme-assets/images/firefox-desktop-player-win.png)  
+![Firefox Desktop Five Elements](readme-assets/images/firefox-desktop-five-elements.png)  
 ### Firefox on Android
 ### Chrome on Windows Desktop
 ### Chrome on Android
