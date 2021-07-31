@@ -153,7 +153,7 @@ function setHeaderTitleText() {
     if(document.body.clientWidth <= 910) {
         htmlSeparator = ", ";
     }
-    if(document.body.clientWidth <= 746) {
+    if(document.body.clientWidth <= 305) {
         htmlSeparator = ":";
         for(let i =  0; i < numActiveElements; i++) {
             html += 
