@@ -111,7 +111,7 @@ function addElementButtons() {
     else {
         for(let i = 0; i < numActiveElements; i++) {
             html += `
-            <button class="game-button" id="${gameElements[i]}" type="button"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            <button class="game-button" id="${gameElements[i]}" type="button" aria-label="${gameElements[i]} button"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
         `            
         }
     }
