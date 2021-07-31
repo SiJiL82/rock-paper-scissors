@@ -132,8 +132,8 @@ The site and all functionality has been tested in the following browsers:
 ![Chrome Android How To Play](readme-assets/images/chrome-android-how-to-play.jpg)  
 ![Chrome Android Draw Round](readme-assets/images/chrome-android-draw.jpg)
 ![Chrome Android Won Round](readme-assets/images/chrome-android-win.jpg)  
-### Firefox on iPad
-Note that this was simulated using the Developer Tools in a desktop web browser
+### iPad
+Note that this was simulated using the Developer Tools in a desktop web browser  
 ![iPad Starting Game](readme-assets/images/ipad-start.png)  
 ![iPad How To Play](readme-assets/images/ipad-how-to-play.png)  
 ![iPad Won Round](readme-assets/images/ipad-win.png)  
@@ -150,7 +150,7 @@ This does not affect normal usage of the site where the resolution is not being 
 - __The site has been tested with the following validators:__
     - ### HTML
         - [W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsijil82.github.io%2Frock-paper-scissors%2F)  
-        - No issues found:
+        - No issues found:  
         ![HTML Validation](readme-assets/images/html-validation.png)  
     - ### CSS
         - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsijil82.github.io%2Frock-paper-scissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
