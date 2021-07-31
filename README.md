@@ -145,7 +145,18 @@ The site is fully responsive, and elements will re-arrange and resize to fit dif
 Note that if testing the site responsiveness in a browser and changing the resolution, the page will need to be refreshed after each resize to allow the javascript to position dynamic elements correctly.  
 This does not affect normal usage of the site where the resolution is not being freely resized.  
 ## Validator Testing
-The site has been tested 
+- __The site has been tested with the following validators:__
+    - ### HTML
+        - [W3C HTML Validation](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsijil82.github.io%2Frock-paper-scissors%2F)  
+        - No issues found:
+        ![HTML Validation](readme-assets/images/html-validation.png)  
+    - ### CSS
+        - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsijil82.github.io%2Frock-paper-scissors%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+        - A number of warnings and errors are returned, however these are all because the validator tool is not up to date with the current CSS specifications.  
+        ![CSS Validator Errors](readme-assets/images/css-validation-errors.png)  
+        ![CSS Validator Warnings](readme-assets/images/css-validation-warnings.png)  
+        - The `Value Error : border-bottom Invalid RGB function ) `, `Invalid RGB function )` errors and `is an unknown vendor extension` warnings are due to the validator not supporting custom CSS properties, which have been a valid part of the CSS specification for a number of years, as per https://github.com/w3c/css-validator/pull/173  
+        - The CSS in use that throws these errors is valid, legal CSS. 
 ## Bugs
 - __Known Issues__
     - There is 1 known issue with the site - when in a mobile / reduced width display where the How To Play and Difficulty boxes are beneath the main game area, the How To Play tooltip can be toggled by clicking in the empty space above the button, as well as on the button itself. 
