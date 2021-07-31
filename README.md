@@ -118,6 +118,10 @@ The site and all functionality has been tested in the following browsers:
 ![Firefox Android Draw Round](readme-assets/images/firefox-android-draw.jpg)
 ![Firefox Android Won Round](readme-assets/images/firefox-android-win.jpg)  
 ### Chrome on Windows Desktop
+![Chrome Desktop Starting Game](readme-assets/images/chrome-desktop-start.png)  
+![Chrome Desktop How To Play](readme-assets/images/chrome-desktop-how-to-play.png)  
+![Chrome Desktop Five Elements](readme-assets/images/chrome-desktop-five-elements.png)  
+![Chrome Desktop Won Round](readme-assets/images/chrome-desktop-won.png)  
 ### Chrome on Android
 ### Firefox on iPad
 Note that this was simulated using the Developer Tools in a desktop web browser
