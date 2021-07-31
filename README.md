@@ -166,6 +166,9 @@ The site has been tested with the Lighthouse tool in Chrome Developer Tools to c
 - __Known Issues__
     - There is 1 known issue with the site - when in a mobile / reduced width display where the How To Play and Difficulty boxes are beneath the main game area, the How To Play tooltip can be toggled by clicking in the empty space above the button, as well as on the button itself. 
         - This space is a margin, and therefore should not trigger a click event, so it is unknown as to why this occurs.
+- __Resolved issues__
+    - A major bug was present during the development of the project where clicking on an element did not return the correct element when using `event.target` in the Event Listener.
+    - This was resolved using the answer at [StackOverflow](https://stackoverflow.com/questions/50149925/click-event-target-gives-element-or-its-child-not-parent-element)
 # Deployment
 - __To view the deployed project:__
     - The project is currently deployed to GitHub pages and can be viewed at https://sijil82.github.io/rock-paper-scissors/
@@ -181,7 +184,8 @@ The site has been tested with the Lighthouse tool in Chrome Developer Tools to c
         - Note that this can take up to 5 minutes to fully deploy.
 
 # Credits
-https://stackoverflow.com/questions/50149925/click-event-target-gives-element-or-its-child-not-parent-element
-https://grid.layoutit.com/
-https://www.tutorialrepublic.com/faq/how-to-change-the-cursor-into-a-hand-pointer-on-hover-using-css.php
-https://www.w3schools.com/howto/howto_css_tooltip.asp
+- __The following resources were used while deploying this project:__
+    - Complementary colours generated using [Sessions Color Calculator](https://www.sessions.edu/color-calculator-results/?colors=fad16b,6b93fa,8803b0,93fa6b)  
+    - CSS Grid generated using [Layoutit](https://grid.layoutit.com/)  
+    - Changing the mouse cursor to a pointer for buttons: [Tutorial Republic](https://www.tutorialrepublic.com/faq/how-to-change-the-cursor-into-a-hand-pointer-on-hover-using-css.php)  
+    - CSS Tooltip Tutorial was used as inspiration for the clickable JavaScript tooltip implemented on the site: [W3 Schools CSS Tooltip](https://www.w3schools.com/howto/howto_css_tooltip.asp)
