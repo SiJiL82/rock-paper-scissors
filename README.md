@@ -35,6 +35,18 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
 - __How To Play Button__
     - A button labelled with "How To Play" can be clicked to pop a set of instructions to the user, explaining how to play the game.  
     ![How To Play Button And Tooltip](readme-assets/images/how-to-play-tooltip.png)
+- __Different Game Modes__
+    - The player can choose between 3 or 5 elements to play the game with.  
+    - Choosing 3 elements gives the user the choice of Rock, Paper or Scissors.  
+    - Choosing 5 elements additionally includes Lizard and Spock. 
+    - Clearly labelled buttons show the user what to click on to change the game mode:
+    ![Control with 3 Elements Chosen](readme-assets/images/controls-three-elements.png)
+    ![Control with 5 Elements Chosen](readme-assets/images/controls-five-elements.png)  
+    - When the game mode is changed, the page title, header and main game area update to reflect the new game mode:  
+    #### 3 Elements Game:
+    ![Game with 3 Elements Chosen](readme-assets/images/game-three-elements.png)  
+    #### 5 Elements Game:
+    ![Game with 5 Elements Chosen](readme-assets/images/game-five-elements.png)  
 
 
 # Testing
