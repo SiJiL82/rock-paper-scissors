@@ -105,7 +105,7 @@ function addElementButtons() {
         for(let i = 0; i < numActiveElements; i++) {
             let rotation = rotationStep * i;
             html += `
-                <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(0, -${buttonTranslateOffset}px) rotate(-${rotation}deg); "><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+                <button class="game-button" id="${gameElements[i]}" type="button" aria-label="${gameElements[i]} button" style="transform: rotate(${rotation}deg) translate(0, -${buttonTranslateOffset}px) rotate(-${rotation}deg); "><i class="fas fa-hand-${gameElements[i]}"></i></button> 
             `
         }
     }
