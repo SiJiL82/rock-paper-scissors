@@ -299,7 +299,7 @@ header {
 @media screen and (max-width: 1320px) {
     /* Center the controls content under the header */
     .controls {
-        grid-template-columns: 1fr 140px 1fr;
+        grid-template-columns: 1fr 150px 1fr;
     }
 }
 
