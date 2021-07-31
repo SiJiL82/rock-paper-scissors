@@ -100,6 +100,7 @@ function addElementButtons() {
     let rotationStep = 360 / numActiveElements;
 
     let buttonTranslateOffset = buttonArea.clientWidth / 3;
+    //If screenwidth is less than 750px, lay buttons out horizontally. If greater than 750px, lay buttons out in a circle.
     if(document.body.clientWidth >= 750) {
         for(let i = 0; i < numActiveElements; i++) {
             let rotation = rotationStep * i;
@@ -146,10 +147,13 @@ function setHeaderTitleText() {
     let headerElement = document.getElementsByTagName("header");
 
     let html = "";
+    //Default header text separator is new line
     let htmlSeparator = "<br>";
+    //If screen width is less than 910px, separator is comma
     if(document.body.clientWidth <= 910) {
         htmlSeparator = ", ";
     }
+    //If screen has very small width, make header text just the first character of each element.
     if(document.body.clientWidth <= 305) {
         htmlSeparator = ":";
         for(let i =  0; i < numActiveElements; i++) {
@@ -157,6 +161,7 @@ function setHeaderTitleText() {
 `${gameElements[i].substring(0, 1).toUpperCase()}${htmlSeparator}`;
         }
     }
+    //Otherwise make header text contain each element.
     else {
         //Loop through the current game elements and add them to the HTML string
         for(let i =  0; i < numActiveElements; i++) {
@@ -194,8 +199,11 @@ function setHeaderTitleText() {
 //Main game function - called when the player clicks on an element.
 function pickElement(event) {
     //Set playerPick to the id of the button we've clicked on
-    //TODO: Add error handling to make sure the ID exists in the gameElements array
     playerPick = event.currentTarget.id;
+    if(!gameElements.includes(playerPick)) {
+        window.alert("Invalid element has some how been chosen. Game cannot continue.");
+        return;
+    }
     //Add styling to the picked button to show we've chosen it
     highlightPickedElement(event.currentTarget);
     
