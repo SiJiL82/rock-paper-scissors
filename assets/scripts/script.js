@@ -16,7 +16,7 @@ let fights = [
 ]
 
 //Set how many of the elements should be used in the game
-let numActiveElements = 3;
+let numActiveElements = 5;
 
 //Score variables for the player and computer
 let playerScore = 0;
@@ -34,8 +34,6 @@ let scoreBorderWidth = window.getComputedStyle(playerScoreBar).borderTopWidth;
 //Get score bar text colours from CSS
 let playerScoreTextColour = window.getComputedStyle(playerScoreBar).color;
 let computerScoreTextColour = window.getComputedStyle(document.getElementById("computer-score-bar")).color;
-console.log(playerScoreTextColour);
-console.log(computerScoreTextColour);
 
 //Get fadeout time CSS variable to use when resetting picked elements
 let pickedFadeoutTime = getComputedStyle(document.documentElement).getPropertyValue("--picked-fadeout-time");
@@ -60,7 +58,6 @@ function addListenersToDifficultySelector() {
 
 //Set how many elements are active
 function setNumActiveElements(num) {
-    console.log(typeof(num));
     //Remove any existing element button listeners
     removeElementButtonListeners();
     //Set to value passed to function for initial loading
@@ -102,12 +99,24 @@ function addElementButtons() {
 
     let rotationStep = 360 / numActiveElements;
     let marginTop = (-numActiveElements + 1) + "rem";
-    
-    for(let i = 0; i < numActiveElements; i++) {
-        let rotation = rotationStep * i;
-        html += `
-            <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(0, -270px) rotate(-${rotation}deg); margin-top: ${marginTop}"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
-        `
+
+    let buttonTranslateOffset = buttonArea.clientWidth / 3;
+    console.log(document.body.clientWidth);
+    console.log(window.innerHeight);
+    if(document.body.clientWidth >= 750 && window.innerHeight >= 906) {
+        for(let i = 0; i < numActiveElements; i++) {
+            let rotation = rotationStep * i;
+            html += `
+                <button class="game-button" id="${gameElements[i]}" type="button" style="transform: rotate(${rotation}deg) translate(0, -${buttonTranslateOffset}px) rotate(-${rotation}deg); margin-top: ${marginTop}"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+            `
+        }
+    }
+    else {
+        for(let i = 0; i < numActiveElements; i++) {
+            html += `
+            <button class="game-button" id="${gameElements[i]}" type="button"><i class="fas fa-hand-${gameElements[i]}"></i></button> 
+        `            
+        }
     }
 
     //Set the HTML on the page to the generated html string
@@ -181,7 +190,6 @@ function pickElement(event) {
     //Set playerPick to the id of the button we've clicked on
     //TODO: Add error handling to make sure the ID exists in the gameElements array
     playerPick = event.currentTarget.id;
-    console.log(`Picked element: ${playerPick}`);
     //Add styling to the picked button to show we've chosen it
     highlightPickedElement(event.currentTarget);
     
@@ -203,7 +211,6 @@ function highlightPickedElement(target) {
 function computerPickElement() {
     //Set computerPick to a random element
     computerPick = gameElements[Math.floor(Math.random() * numActiveElements)];
-    console.log(`Computer picked element: ${computerPick}`);
 }
 
 //Add styling to the element the computer picked.
@@ -222,7 +229,7 @@ function getRoundWinner() {
 
     //If both indexes are the same, the same elements were chosen and the round is a draw
     if(playerPickIndex === computerPickIndex) {
-        resultDisplay.innerText = "Draw!";
+        resultDisplay.innerHTML = "Draw!<br><br>";
     }
     else {
         //Loop through each possible outcome in the fights array
@@ -257,7 +264,7 @@ function getRoundWinner() {
     //Re-enable buttons
     setTimeout(function(){addElementButtonListeners()}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
     //Change center display text to let user know the next round can start
-    setTimeout(function(){document.getElementById("result-text").innerText = "Go!";}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
+    setTimeout(function(){document.getElementById("result-text").innerHTML = "Go!<br><br>";}, parseInt(clearHighlightingTime) + parseInt(pickedFadeoutTime) + 10);
 }
 
 //Set the score bar so each player's score is a percentage of the total cumulated score
@@ -391,5 +398,3 @@ function resetDifficultyControls() {
         }
     }
 }
-
-console.log(document.body.clientWidth);
