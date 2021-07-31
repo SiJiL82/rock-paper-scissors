@@ -52,6 +52,15 @@ The site can be viewed on my deployed [GitHub Pages](https://sijil82.github.io/r
         - The `fights` array details for each possible combination which element will win (the first item in the array), which element will lose (the second item) and the action performed to win the fight. 
         - Extra button elements will also need to be added to let the user control how many elements are in the game.  
     ![Game Element Code Arrays](readme-assets/images/element-definition-code.png)
+- __Picking an Element__
+    - The player can click whichever element they which to use for a round, and when they do so the computer will pick a random element.  
+    - The game will then use the `fights` array to determine which of the 2 elements will win the fight.  
+    - When the user picks an element, it is highlighted on the game board with a coloured ring around the element:  
+    ![Player Picked Element](readme-assets/images/player-picked-highlight.png)
+    - The computer's picked element is also highlighted, in a different colour:  
+    ![Computer Picked Element](readme-assets/images/computer-picked-highlight.png)
+    - The player highlighting is made inside the button, whereas the computer highlighting is outside it. This means if both players pick the same button, the highlighting for each is still visible:  
+    ![Bot Picked Element](readme-assets/images/both-picked-highlight.png)
 
 
 # Testing
