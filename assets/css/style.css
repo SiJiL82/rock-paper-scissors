@@ -114,6 +114,7 @@ header {
     color: rgba(var(--gamebutton-colour), 1);
     background-color: rgba(var(--gamebutton-background-colour), 1);
     margin-left: -6rem;
+    margin-top: -5rem;
     width: 12rem;
     height: 12rem;
     border-radius: 50%;
@@ -265,6 +266,27 @@ header {
 #difficulty-control input[type="radio"]:checked+label {
     background-color: rgba(var(--header-text-colour), 1);
 }
+
+@media screen and (max-height: 900px) {
+    .game-area {
+        margin-top: 0;
+        width: 680px;
+        height: 680px;
+    }
+
+    .game {
+        grid-template-rows: 680px 1fr;
+    }
+
+    .score-area {
+        width: 680px;
+    }
+
+    .game-button {
+        margin-top: -5rem;
+    }
+}
+
 
 /* Screen width that starts the right edge from reducing down */
 @media screen and (max-width: 1320px) {
